@@ -68,6 +68,18 @@ cover, which is exactly why the calendar is kept rather than replaced.
 In Calendar.app: search the **UFC Events** calendar for 2026 entries and delete
 them. Nothing will re-add them — the old sync was disabled in step 1.
 
+### Do NOT delete grappling entries
+
+**Delete a 2026 entry only if the feed has a counterpart.** The feed carries no
+grappling, so anything named `UFC BJJ ...` has no replacement and deleting it
+loses that record permanently.
+
+As of 2026-08-06 the old calendar held two: `UFC BJJ 5: Musumeci vs. Montague`
+(12 Feb) and `UFC BJJ 6: Fowler vs. Machado` (12 Mar). Keep them, and keep any
+future ones you add by hand. ESPN does not track grappling at all; ufc.com does
+list UFC BJJ cards when they are scheduled, so expect roughly 2-4 a year to
+add yourself.
+
 ### Do step 3 BEFORE this step
 
 **Subscribe first, delete second.** Written the other way round originally, on
