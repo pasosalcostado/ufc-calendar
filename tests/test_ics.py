@@ -21,39 +21,66 @@ def test_fold_splits_long_lines_with_a_leading_space():
     assert all(p.startswith(" ") for p in parts[1:])
 
 
-def test_fold_never_splits_a_multibyte_character_across_lines():
-    # Genuinely multi-byte content: 2-byte Latin Extended-A (á in Procházka,
-    # ć in Medić) and a 3-byte character outside Latin-1 (— and 日/本), so
-    # both encoding widths are covered. Repeated to force several
-    # continuation lines, not just one fold.
-    original = "SUMMARY:" + ("Procházka vs. Medić — 日本 " * 8).strip()
-    folded = fold(original)
-    parts = folded.split("\r\n")
+def test_fold_never_splits_a_multibyte_character_across_a_fold_boundary():
+    # Adversarial by construction, not by luck. "SUMMARY:" is 8 ASCII
+    # octets; padding with 0-3 more ASCII bytes before a run of 3-byte
+    # 日 characters shifts every subsequent character's byte offset by
+    # 0-3. Across pad in range(4), at least one 日 character is
+    # guaranteed to have its 3-byte UTF-8 span straddle the 75-octet fold
+    # boundary (occupy both octet index 74 and octet index 75) — the
+    # self-check below proves this rather than assuming it. A fold() that
+    # slices raw UTF-8 bytes (instead of iterating characters) would cut
+    # straight through that character; the real fold() must not.
+    straddled_at_least_once = False
 
-    assert len(parts) >= 4, (
-        f"expected several continuation lines to actually exercise the "
-        f"multi-byte fold path, got only {len(parts)}"
-    )
+    for pad in range(4):
+        original = "SUMMARY:" + ("A" * pad) + ("日" * 60)
 
-    for i, part in enumerate(parts):
-        encoded = part.encode("utf-8")
-        assert len(encoded) <= 75, (
-            f"line {i} is {len(encoded)} octets (> 75 limit): {part!r}"
+        # Self-check: confirm THIS pad value is actually adversarial by
+        # finding the character whose UTF-8 byte span covers both octet
+        # index 74 and octet index 75 (the boundary fold() draws for the
+        # first physical line, which holds up to 75 octets).
+        offset = 0
+        for ch in original:
+            enc = ch.encode("utf-8")
+            start, end = offset, offset + len(enc) - 1  # inclusive
+            if start <= 74 <= end and start <= 75 <= end:
+                straddled_at_least_once = True
+                break
+            offset += len(enc)
+
+        folded = fold(original)
+        parts = folded.split("\r\n")
+
+        for i, part in enumerate(parts):
+            encoded = part.encode("utf-8")
+            assert len(encoded) <= 75, (
+                f"pad={pad} line {i} is {len(encoded)} octets (> 75 limit): {part!r}"
+            )
+            # Decode each line INDIVIDUALLY (not the joined string) — this
+            # is the assertion that actually fails if a byte-slicing fold()
+            # cut a multi-byte character in half.
+            try:
+                encoded.decode("utf-8")
+            except UnicodeDecodeError as exc:
+                raise AssertionError(
+                    f"pad={pad} line {i} does not decode as clean UTF-8 — "
+                    f"a multi-byte character was split across the fold "
+                    f"boundary: {part!r} ({exc})"
+                ) from exc
+
+        unfolded = folded.replace("\r\n ", "")
+        assert unfolded == original, (
+            f"pad={pad}: unfolding (strip CRLF + one leading space) did "
+            f"not reproduce the original string — content was lost or "
+            f"duplicated at a fold boundary"
         )
-        try:
-            encoded.decode("utf-8")
-        except UnicodeDecodeError as exc:
-            raise AssertionError(
-                f"line {i} does not decode as clean UTF-8 — a multi-byte "
-                f"character was split across the fold boundary: "
-                f"{part!r} ({exc})"
-            ) from exc
 
-    unfolded = folded.replace("\r\n ", "")
-    assert unfolded == original, (
-        "unfolding (strip CRLF + one leading space) did not reproduce the "
-        "original string — content was lost or duplicated at a fold "
-        "boundary"
+    assert straddled_at_least_once, (
+        "self-check failed: none of pad=0..3 produced a character whose "
+        "UTF-8 byte span crosses the 75-octet fold boundary — this test "
+        "is not actually adversarial and would not catch a byte-slicing "
+        "fold() bug"
     )
 
 
