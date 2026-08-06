@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from src.espn import EspnDataError, parse_events
+from src.espn import EspnDataError, _build_request, parse_events
 
 FIXTURE = Path(__file__).parent / "fixtures" / "espn_2026.json"
 
@@ -57,3 +57,12 @@ def test_missing_competitions_raises():
 def test_empty_payload_raises():
     with pytest.raises(EspnDataError, match="no events"):
         parse_events({"events": []})
+
+
+def test_request_carries_no_user_agent():
+    # ESPN's WAF 403s both a custom UA and a browser-impersonating one; only
+    # urllib's own default (i.e. no UA header set by us) gets through. Guards
+    # against someone "helpfully" adding a UA string back in and silently
+    # breaking the daily build. Verified against the live endpoint 2026-08-06.
+    req = _build_request("https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates=2026")
+    assert req.get_header("User-agent") is None

@@ -31,13 +31,26 @@ def _parse_utc(value: str) -> datetime:
         raise EspnDataError(f"unparseable timestamp {value!r}") from exc
 
 
+def _build_request(url: str) -> Request:
+    """Build the outbound request.
+
+    Deliberately NO User-Agent header. ESPN's WAF (Akamai) returns 403 for a
+    custom UA string ("ufc-calendar/1.0") and equally for a browser-impersonating
+    one ("Mozilla/5.0 ..."); it only accepts honest library defaults, i.e. no UA
+    header at all (urllib then sends its own "Python-urllib/3.x"). Verified
+    2026-08-06 against the live endpoint. Do NOT "helpfully" add a UA string
+    here — it will silently break the daily build with a 403.
+    """
+    return Request(url)
+
+
 def fetch_season(year: int, *, timeout: float = 30.0, retries: int = 3) -> dict:
     """Fetch one season. Raises EspnDataError once retries are exhausted."""
     url = SCOREBOARD_URL.format(year=year)
     last: Exception | None = None
     for attempt in range(retries):
         try:
-            req = Request(url, headers={"User-Agent": "ufc-calendar/1.0"})
+            req = _build_request(url)
             with urlopen(req, timeout=timeout) as resp:
                 if resp.status != 200:
                     raise EspnDataError(f"HTTP {resp.status} from ESPN")

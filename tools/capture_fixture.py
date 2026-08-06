@@ -13,7 +13,13 @@ URL = "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates={y
 
 
 def main(year: str) -> None:
-    req = Request(URL.format(year=year), headers={"User-Agent": "ufc-calendar/1.0"})
+    # Deliberately NO User-Agent header. ESPN's WAF (Akamai) returns 403 for a
+    # custom UA string ("ufc-calendar/1.0") and equally for a browser-impersonating
+    # one ("Mozilla/5.0 ..."); it only accepts honest library defaults, i.e. no UA
+    # header at all (urllib then sends its own "Python-urllib/3.x"). Verified
+    # 2026-08-06 against the live endpoint. Do NOT "helpfully" add a UA string
+    # here — it will silently break this capture tool with a 403.
+    req = Request(URL.format(year=year))
     with urlopen(req, timeout=60) as resp:
         payload = json.load(resp)
 
