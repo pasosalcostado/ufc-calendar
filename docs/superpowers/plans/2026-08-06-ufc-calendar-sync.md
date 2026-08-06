@@ -1662,7 +1662,8 @@ Expected: 11 passed
 - [ ] **Step 5: Run the whole suite**
 
 Run: `python3 -m pytest tests/ -v`
-Expected: all tests pass (61 across seven modules)
+Expected: all tests pass — 69 across eight modules (espn 8, classify 8, pfn 11,
+titles 10, ics 7, countdown 5, merge 9, build 11)
 
 - [ ] **Step 6: Do a real build and inspect the diff against the March file**
 
