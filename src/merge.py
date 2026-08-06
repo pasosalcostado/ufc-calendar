@@ -18,14 +18,26 @@ _DTSTART_UTC = re.compile(r"^DTSTART:(\d{8})T\d{6}Z\r?$", re.MULTILINE)
 
 
 def split_vevents(data: bytes) -> dict[str, str]:
-    """Split a rendered calendar into {uid: raw VEVENT block}."""
+    """Split a rendered calendar into {uid: raw VEVENT block}.
+
+    ASSUMPTION: the non-greedy match below stops at the first literal
+    "END:VEVENT" it finds. escape() (src/ics.py) does not escape ':', so a
+    DESCRIPTION/SUMMARY containing the literal text "END:VEVENT" would
+    truncate a block early. Considered and accepted: this data is UFC event
+    metadata, never free-form user text, so the string cannot appear in
+    practice, and guarding against it would complicate the regex for no real
+    benefit.
+    """
     text = data.decode("utf-8")
     blocks: dict[str, str] = {}
     for raw in re.findall(r"BEGIN:VEVENT\r\n.*?END:VEVENT", text, re.DOTALL):
         match = _UID.search(raw)
         if not match:
             raise ValueError(f"VEVENT without a UID:\n{raw[:200]}")
-        blocks[match.group(1).strip()] = raw
+        uid = match.group(1).strip()
+        if uid in blocks:
+            raise ValueError(f"Duplicate UID in calendar data: {uid!r}")
+        blocks[uid] = raw
     return blocks
 
 

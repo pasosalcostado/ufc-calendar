@@ -1,5 +1,7 @@
 # tests/test_merge.py
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
+
+import pytest
 
 from src.ics import all_day_vevent, calendar, timed_vevent
 from src.merge import merge_past, split_vevents, vevent_start
@@ -63,3 +65,31 @@ def test_past_events_are_never_rewritten():
 def test_first_run_seeds_past_events_from_fresh():
     fresh = {"p": timed("p", datetime(2026, 1, 1, tzinfo=timezone.utc))}
     assert set(merge_past({}, fresh, today=date(2026, 8, 6))) == {"p"}
+
+
+def test_event_dated_exactly_today_is_dropped_when_espn_cancels_it():
+    # today itself is upcoming/ESPN-authoritative, not past. If the boundary
+    # were `<= today` instead of `< today`, this event would be frozen in
+    # place even after ESPN stops publishing it.
+    today = date(2026, 8, 6)
+    existing = {"today_uid": timed("today_uid", datetime(2026, 8, 6, tzinfo=timezone.utc))}
+    merged = merge_past(existing, {}, today=today)
+    assert merged == {}
+
+
+def test_event_dated_the_day_before_today_is_retained_when_absent_from_fresh():
+    # Mirror of the above: one day earlier must still be treated as past and
+    # carried forward, pinning the boundary from the other side.
+    today = date(2026, 8, 6)
+    yesterday = today - timedelta(days=1)
+    existing = {"y": timed("y", datetime(yesterday.year, yesterday.month, yesterday.day,
+                                          tzinfo=timezone.utc))}
+    merged = merge_past(existing, {}, today=today)
+    assert set(merged) == {"y"}
+
+
+def test_split_raises_on_duplicate_uid():
+    data = calendar([timed("dup", datetime(2026, 1, 1, tzinfo=timezone.utc)),
+                     timed("dup", datetime(2026, 2, 1, tzinfo=timezone.utc))])
+    with pytest.raises(ValueError, match="dup"):
+        split_vevents(data)
