@@ -48,24 +48,45 @@ Secondary complaints, both consequences of the AppleScript approach:
 
 ## 2. Data source
 
-`GET https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard` → HTTP 200, ~62 KB.
-
-Read `leagues[0].calendar` — a 43-entry array covering the full 2026 season:
+`GET https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates=<season-year>`
+→ HTTP 200, ~2 MB. Read the top-level **`events[]`** array: 43 entries for 2026, each with
 
 ```json
 {
-  "label": "UFC 330: Makhachev vs. Machado Garry",
-  "startDate": "2026-08-16T00:00Z",
-  "endDate": "2026-08-16T07:59Z",
-  "event": { "$ref": "http://sports.core.api.espn.pvt/v2/sports/mma/leagues/ufc/events/600060633?..." }
+  "id": "600057024",
+  "name": "UFC 324: Gaethje vs. Pimblett",
+  "date": "2026-01-24T22:30Z",
+  "competitions": [ { "date": "...", "venue": { "fullName": "...", "address": {…} } }, … ]
 }
 ```
 
-**Verified properties (2026-08-06):** 43/43 entries carry a unique 9-digit numeric event ID in
-`event.$ref`; no duplicates; `startDate` is ISO-8601 UTC.
+**Verified 2026-08-06:** 43/43 events have a unique 9-digit `id`, and 43/43 carry a usable venue.
+One request covers the whole season, so no per-event fetches are needed.
 
-**Do not use `endDate`.** It is `07:59Z` for every single event — a broadcast-day boundary, not
-a real end time.
+### Do not use `leagues[0].calendar` for times
+
+The lighter `calendar[]` array (used in early drafts of this design) carries **synthetic start
+times**. Measured across all 43 events, `calendar[].startDate` is *exactly* `events[].date + 3.0h`
+— a mechanical offset with no relationship to any real bout. Its `endDate` is likewise `07:59Z`
+for every event, a broadcast-day boundary rather than an end time. **Neither field may be used.**
+
+`calendar[]` remains a valid source of event IDs and labels only.
+
+### Real card times come from `competitions[].date`
+
+Each event's bouts are grouped into 2–3 distinct start times — early prelims, prelims, main card:
+
+```
+UFC 324, 11 bouts:  2026-01-24T22:30Z   early prelims
+                    2026-01-25T00:00Z   prelims
+                    2026-01-25T02:00Z   main card      ← the marquee broadcast
+```
+
+- **`DTSTART` = `max(competitions[].date)`** — the last distinct segment, i.e. the main card.
+- `DURATION:PT3H`.
+- `events[].date` (= the earliest bout) goes in `DESCRIPTION` as "first bout HH:MM".
+- DWCS events have a single segment, so first bout and main card coincide. This is expected and
+  must not be treated as an error.
 
 **Known caveat:** this endpoint is undocumented — it is ESPN's internal scoreboard API. There is
 no SLA. It is accepted because its failure mode is *loud* (HTTP error or missing key → build
@@ -287,12 +308,16 @@ Normalization: `vs.` → `vs` everywhere (ESPN is internally inconsistent — `M
 Garry` but `Gamrot vs Salkilld`). Titles are kept short because iOS month view truncates hard.
 
 `DESCRIPTION` carries the full detail: the verbatim ESPN label, event type, the PFN number
-written out for invoicing, and the ESPN event URL. Short where Roger scans, complete where he
-looks.
+written out for invoicing, **the first-bout time**, the venue, and the ESPN event URL. Short
+where Roger scans, complete where he looks — this is what makes the short iOS titles lossless.
 
 ### Timing
 
-- `DTSTART` in **UTC** (`DTSTART:20260816T000000Z`), `DURATION:PT3H`.
+- `DTSTART` in **UTC**, set to the **main card** start (`max(competitions[].date)`, §2), with
+  `DURATION:PT3H`. Example: UFC 330 → `DTSTART:20260816T010000Z`, rendering as Sat 15 Aug
+  19:00–22:00 in El Salvador.
+- `LOCATION` from `competitions[0].venue` — `"<city>, <state|country>"` (available for 43/43
+  events; restores a field the 2026-03-14 version had).
 - **The script never computes a local date.** macOS/iOS render in the device's current zone, so
   entries re-render on travel with no re-sync. UFC 330 shows 19:00 in Houston and 18:00 in El
   Salvador from the same entry.
@@ -389,6 +414,9 @@ The old script's defining flaw was reporting success while dropping input. Rules
 | Season rollover | feeding a 2027-only ESPN payload retains all 2026 entries in the output |
 | CRLF | published bytes use `\r\n` throughout, with no bare `\n` (RFC 5545) |
 | UID stability | changing an event's title or date leaves its UID unchanged (the March-2026 hash-UID regression) |
+| Main-card selection | `DTSTART` equals the latest `competitions[].date`, not `events[].date` and not `calendar[].startDate` |
+| Synthetic-time guard | if `DTSTART` ever equals `events[].date + 3h` for every event, fail — that means `calendar[]` was used by mistake |
+| Single-segment events | a DWCS event (one bout time) builds without error |
 
 ## 10. Cutover
 
