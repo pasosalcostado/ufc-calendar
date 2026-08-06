@@ -156,3 +156,32 @@ def test_main_leaves_existing_file_intact_when_espn_is_unreachable(tmp_path, mon
         main(["--output", str(output), "--ledger", str(ledger_path)])
 
     assert output.read_bytes() == original
+
+
+def test_main_saves_the_ledger_before_publishing_the_calendar(tmp_path, monkeypatch):
+    # The two directions of drift are not symmetric (see the comment at the
+    # call site in main()): a ledger write that fails AFTER the calendar
+    # already published can freeze a wrong PFN number into a past, frozen
+    # entry forever. This test exercises a successful build -- the only path
+    # where both calls happen -- and pins their relative order directly,
+    # so a well-meaning "tidy this up" swap fails the suite instead of only
+    # a comment.
+    output = tmp_path / "UFC_Events.ics"
+    ledger_path = tmp_path / "pfn_ledger.json"
+
+    order: list[str] = []
+
+    monkeypatch.setattr("src.build.fetch_season", lambda year: payload())
+    monkeypatch.setattr("src.build.save_ledger",
+                        lambda ledger, path: order.append("ledger"))
+    monkeypatch.setattr("src.build._atomic_write",
+                        lambda path, data: order.append("calendar"))
+
+    result = main(["--output", str(output), "--ledger", str(ledger_path)])
+
+    assert result == 0
+    # Both calls actually happened -- a partial/empty list would mean one of
+    # the patches was never exercised, and the sequence assertion below
+    # would be vacuous.
+    assert len(order) == 2
+    assert order == ["ledger", "calendar"]
