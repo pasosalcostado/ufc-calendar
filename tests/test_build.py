@@ -1,10 +1,12 @@
 import json
+import os
 from datetime import date
 from pathlib import Path
 
 import pytest
 
-from src.build import ValidationError, build_calendar, validate
+from src.build import ValidationError, _atomic_write, build_calendar, main, validate
+from src.espn import EspnDataError
 from src.ics import calendar
 from src.merge import split_vevents
 from src.pfn import ANCHOR_ID, ANCHOR_PFN
@@ -52,7 +54,9 @@ def test_build_is_idempotent():
     args = (payload(), {}, calendar([]), date(2026, 8, 6))
     first, ledger = build_calendar(*args)
     second, _ = build_calendar(payload(), ledger, first, date(2026, 8, 6))
-    assert split_vevents(first).keys() == split_vevents(second).keys()
+    # Full byte comparison, not just UID keys -- a change to any SUMMARY,
+    # DTSTART, or DESCRIPTION on a re-run would pass a keys-only check.
+    assert first == second
 
 
 def test_output_is_crlf_only():
@@ -89,3 +93,66 @@ def test_unknown_event_type_fails_the_build():
     broken["events"][0]["name"] = "Slap Fighting Championship 3"
     with pytest.raises(UnknownEventType):
         build_calendar(broken, {}, calendar([]), today=date(2026, 8, 6))
+
+
+# --- Durability guarantees -------------------------------------------------
+#
+# These pin the project's core promise -- "the previously published bytes
+# survive any failure" -- so a future change to _atomic_write or main()'s
+# ordering breaks a test instead of silently regressing.
+
+def test_atomic_write_cleans_up_on_failure(tmp_path, monkeypatch):
+    target = tmp_path / "UFC_Events.ics"
+    target.write_bytes(b"ORIGINAL")
+
+    def boom(*args, **kwargs):
+        raise OSError("disk full")
+
+    monkeypatch.setattr(os, "fdopen", boom)
+
+    with pytest.raises(OSError):
+        _atomic_write(target, b"NEW DATA")
+
+    # The target was never touched...
+    assert target.read_bytes() == b"ORIGINAL"
+    # ...and the temp file used to stage the write did not survive it.
+    leftovers = [p for p in tmp_path.iterdir() if p != target]
+    assert leftovers == []
+
+
+def test_main_leaves_existing_file_intact_on_validation_failure(tmp_path, monkeypatch):
+    output = tmp_path / "UFC_Events.ics"
+    ledger_path = tmp_path / "pfn_ledger.json"
+    original = calendar([])
+    output.write_bytes(original)
+    ledger_path.write_text("{}", encoding="utf-8")
+
+    monkeypatch.setattr("src.build.fetch_season", lambda year: payload())
+
+    def fail_validate(data, minimum=20):
+        raise ValidationError("forced failure for the test")
+
+    monkeypatch.setattr("src.build.validate", fail_validate)
+
+    with pytest.raises(ValidationError):
+        main(["--output", str(output), "--ledger", str(ledger_path)])
+
+    assert output.read_bytes() == original
+
+
+def test_main_leaves_existing_file_intact_when_espn_is_unreachable(tmp_path, monkeypatch):
+    output = tmp_path / "UFC_Events.ics"
+    ledger_path = tmp_path / "pfn_ledger.json"
+    original = calendar([])
+    output.write_bytes(original)
+    ledger_path.write_text("{}", encoding="utf-8")
+
+    def boom(year, **kwargs):
+        raise EspnDataError("ESPN unreachable")
+
+    monkeypatch.setattr("src.build.fetch_season", boom)
+
+    with pytest.raises(EspnDataError):
+        main(["--output", str(output), "--ledger", str(ledger_path)])
+
+    assert output.read_bytes() == original

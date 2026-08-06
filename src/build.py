@@ -108,8 +108,18 @@ def main(argv: list[str] | None = None) -> int:
     data, updated = build_calendar(payload, ledger, existing, today=now.date())
     validate(data)
 
-    _atomic_write(args.output, data)
+    # Ledger first, calendar second. The two directions of drift are NOT
+    # symmetric: if the calendar publish succeeds but the ledger write then
+    # fails, a PFN number now sits in published text (SUMMARY/DESCRIPTION)
+    # that the ledger file never recorded -- and once that event ages into
+    # the past, merge_past() freezes the block verbatim forever, so the
+    # divergence becomes permanent and lands on an invoice. The reverse is
+    # safe: if the ledger write succeeds but the calendar publish then
+    # fails, the next run's assign() sees those events as already numbered
+    # (assign-once, never renumbered) and reproduces identical output --
+    # republishing is simply a retry. So the safe-to-retry step goes last.
     save_ledger(updated, args.ledger)
+    _atomic_write(args.output, data)
 
     print(f"published {len(split_vevents(data))} entries to {args.output}")
     return 0
