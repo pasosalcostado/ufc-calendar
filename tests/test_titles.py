@@ -72,3 +72,27 @@ def test_description_states_first_bout_in_utc_and_relatively():
     text = description(make(name), classify(name), None)
     assert "21:30 UTC" in text
     assert "3h30m before main card" in text
+
+
+def test_description_fight_night_without_a_number_raises():
+    name = "UFC Fight Night: Hernandez vs. Rodrigues"
+    with pytest.raises(TitleError, match="no PFN number"):
+        description(make(name), classify(name), None)
+
+
+def test_description_noche_without_a_number_raises():
+    name = "Noche UFC: Rodriguez vs. Silva"
+    with pytest.raises(TitleError, match="no PFN number"):
+        description(make(name), classify(name), None)
+
+
+def test_description_ppv_without_a_number_still_renders():
+    name = "UFC 330: Makhachev vs. Machado Garry"
+    text = description(make(name), classify(name), None)
+    assert "Type: PPV" in text
+
+
+def test_description_dwcs_without_a_number_still_renders():
+    name = "Dana White's Contender Series: Season 10, Week 3"
+    text = description(make(name), classify(name), None)
+    assert "Type: DWCS" in text

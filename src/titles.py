@@ -55,7 +55,9 @@ def _lead_time(event: Event) -> str:
 def description(event: Event, cls: Classification, pfn: int | None) -> str:
     lines = [event.name]
 
-    if cls.type is EventType.PFN or (cls.counts_for_pfn and pfn is not None):
+    if cls.type is EventType.PFN or cls.counts_for_pfn:
+        if pfn is None:
+            raise TitleError(f"{event.name!r} counts for PFN numbering but has no PFN number")
         lines.append(f"Paramount Fight Night {pfn}")
     else:
         lines.append(f"Type: {cls.type.value}")
