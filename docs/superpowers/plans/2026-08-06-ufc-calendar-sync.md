@@ -1358,9 +1358,12 @@ refresh. Past entries are therefore carried forward verbatim.
 import re
 from datetime import date
 
-_UID = re.compile(r"^UID:(.+)$", re.MULTILINE)
-_DTSTART_DATE = re.compile(r"^DTSTART;VALUE=DATE:(\d{8})$", re.MULTILINE)
-_DTSTART_UTC = re.compile(r"^DTSTART:(\d{8})T\d{6}Z$", re.MULTILINE)
+# NOTE: these operate on CRLF text. With re.MULTILINE, `$` matches before `\n`,
+# and the `\r` sits between the value and the newline -- so a bare `$` anchor
+# would never match. The explicit `\r?` is required, not decorative.
+_UID = re.compile(r"^UID:(.+?)\r?$", re.MULTILINE)
+_DTSTART_DATE = re.compile(r"^DTSTART;VALUE=DATE:(\d{8})\r?$", re.MULTILINE)
+_DTSTART_UTC = re.compile(r"^DTSTART:(\d{8})T\d{6}Z\r?$", re.MULTILINE)
 
 
 def split_vevents(data: bytes) -> dict[str, str]:
