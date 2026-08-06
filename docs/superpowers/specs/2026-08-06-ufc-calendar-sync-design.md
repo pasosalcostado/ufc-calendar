@@ -105,7 +105,7 @@ one and has never worked. **Roger adds grappling events by hand. Out of scope.**
 GitHub Actions (cron, daily 09:00 UTC)
   └─ build_ics.py
        ├─ GET ESPN scoreboard  (timeout + retries)
-       ├─ classify each entry  → PPV | PFN | DWCS | SPECIAL
+       ├─ classify each entry  → NUMBERED | PFN | DWCS | SPECIAL
        ├─ derive PFN numbers   (anchored, asserted)
        ├─ render VEVENTs       (stable UIDs, UTC DTSTART)
        ├─ validate output
@@ -176,7 +176,7 @@ Applied to `label`, in this order (first match wins):
 
 | Order | Test | Type |
 |---|---|---|
-| 1 | `re.search(r"UFC\s+\d{3,}", label)` | `PPV` |
+| 1 | `re.search(r"UFC\s+\d{3,}", label)` | `NUMBERED` |
 | 2 | `"contender series" in label.lower()` | `DWCS` |
 | 3 | `label.lower()` contains any of `noche`, `freedom`, `white house`, `special`, `super bowl` | `SPECIAL` |
 | 4 | `"fight night" in label.lower()` | `PFN` |
@@ -197,7 +197,7 @@ they genuinely disagree for Noche UFC:
 
 | type | `counts_for_pfn` | `countdown_eligible` |
 |---|---|---|
-| `PPV` | no | **yes** |
+| `NUMBERED` | no | **yes** |
 | `PFN` | **yes** | no |
 | `DWCS` | no | no |
 | `SPECIAL` — Noche | **yes** (provisional, see §5) | **yes** |
@@ -228,8 +228,14 @@ chronological order. Verified against Roger's known value (dates are the UTC dat
 19  2026-08-09  Gamrot vs Salkilld         ← Roger: "this week it is PFN 19" ✓
 ```
 
-The chain matches exactly at 19. This simultaneously confirms three exclusion rules: PPVs,
-DWCS, and `UFC Freedom 250` are **not** counted. (Had any been counted, the total would be 20+.)
+The chain matches exactly at 19. This simultaneously confirms three exclusion rules: numbered
+events, DWCS, and `UFC Freedom 250` are **not** counted. (Had any been counted, the total would
+be 20+.)
+
+**Terminology note (per Roger, 2026-08-06):** in the US and LATAM these numbered cards are **no
+longer pay-per-view** — they are simply numbered events and Fight Nights. The event type is
+therefore named `NUMBERED`, not `PPV`. This is a factual correction from the project owner, who
+subtitles these professionally; do not reintroduce "PPV" anywhere in code, tests, or output.
 
 ### Numbers are assigned once and never recomputed
 
@@ -267,26 +273,27 @@ Noche UFC falls after the anchor, so the arithmetic cannot settle it. Evidence f
 seasons on the same endpoint:
 
 ```
-2024-09-15   UFC 306 – Riyadh Season Noche UFC: O’Malley vs. Dvalishvili   ← PPV form
-2025-09-13   Noche UFC: Lopes vs. Silva                                     ← non-PPV form
-2026-09-12   Noche UFC: Rodriguez vs. Silva                                 ← non-PPV form
+2024-09-15   UFC 306 – Riyadh Season Noche UFC: O’Malley vs. Dvalishvili   ← numbered form
+2025-09-13   Noche UFC: Lopes vs. Silva                                     ← non-numbered form
+2026-09-12   Noche UFC: Rodriguez vs. Silva                                 ← non-numbered form
 ```
 
-ESPN's label reliably distinguishes the two forms: in PPV form it carries a `UFC nnn`; otherwise
-it does not. Roger billed the 2025 edition as a **numbered Fight Night**.
+ESPN's label reliably distinguishes the two forms: in numbered form it carries a `UFC nnn`;
+otherwise it does not. Roger billed the 2025 edition as a **numbered Fight Night**.
 
 **Caveat, per Roger:** 2025 was an anomaly — the Guadalajara arena was not ready, UFC moved the
 card to San Antonio, and it became a Fight Night by circumstance. So 2025 is not proof that
 Noche is *designed* as a Fight Night. The inference rests on the weaker but still sound claim:
-*when Noche is not a PPV, it has been a numbered Fight Night.* 2026 is in non-PPV form.
+*when Noche does not carry a UFC number, it has been a numbered Fight Night.* 2026 is in
+non-numbered form.
 
-**Decision: `counts_for_pfn = True` for non-PPV Noche.** Title format is unchanged
+**Decision: `counts_for_pfn = True` for non-numbered Noche.** Title format is unchanged
 (`Noche UFC: Rodriguez vs Silva`); only the ledger assignment differs, and the number appears in
 `DESCRIPTION` for invoicing.
 
-Note the classification order already handles the PPV form with no special case: the 2024 label
-matches rule 1 (`UFC\s+\d{3,}`) and classifies as `PPV` before ever reaching the `noche` test —
-verified against real 2024 data, not assumed.
+Note the classification order already handles the numbered form with no special case: the 2024
+label matches rule 1 (`UFC\s+\d{3,}`) and classifies as `NUMBERED` before ever reaching the
+`noche` test — verified against real 2024 data, not assumed.
 
 **September 2026 checkpoint.** Roger confirms the real number when he bills it. If wrong, only
 events *after* 2026-09-12 are affected — assign-once (above) guarantees nothing already billed

@@ -87,7 +87,8 @@ URL = "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates={y
 
 
 def main(year: str) -> None:
-    req = Request(URL.format(year=year), headers={"User-Agent": "ufc-calendar/1.0"})
+    # No User-Agent header on purpose -- see the note in src/espn.py.
+    req = Request(URL.format(year=year))
     with urlopen(req, timeout=60) as resp:
         payload = json.load(resp)
 
@@ -254,7 +255,13 @@ def fetch_season(year: int, *, timeout: float = 30.0, retries: int = 3) -> dict:
     last: Exception | None = None
     for attempt in range(retries):
         try:
-            req = Request(url, headers={"User-Agent": "ufc-calendar/1.0"})
+            # Deliberately NO User-Agent header. Verified 2026-08-06 against the
+            # live endpoint: ESPN's WAF returns 403 for a custom UA
+            # ("ufc-calendar/1.0") AND for a browser-impersonating UA
+            # (Chrome 126), but 200 for honest library defaults. Letting
+            # urllib send its own "Python-urllib/3.x" is both what works and
+            # the honest thing to send. Do not "improve" this by adding a UA.
+            req = Request(url)
             with urlopen(req, timeout=timeout) as resp:
                 if resp.status != 200:
                     raise EspnDataError(f"HTTP {resp.status} from ESPN")
@@ -1358,9 +1365,12 @@ refresh. Past entries are therefore carried forward verbatim.
 import re
 from datetime import date
 
-_UID = re.compile(r"^UID:(.+)$", re.MULTILINE)
-_DTSTART_DATE = re.compile(r"^DTSTART;VALUE=DATE:(\d{8})$", re.MULTILINE)
-_DTSTART_UTC = re.compile(r"^DTSTART:(\d{8})T\d{6}Z$", re.MULTILINE)
+# NOTE: these operate on CRLF text. With re.MULTILINE, `$` matches before `\n`,
+# and the `\r` sits between the value and the newline -- so a bare `$` anchor
+# would never match. The explicit `\r?` is required, not decorative.
+_UID = re.compile(r"^UID:(.+?)\r?$", re.MULTILINE)
+_DTSTART_DATE = re.compile(r"^DTSTART;VALUE=DATE:(\d{8})\r?$", re.MULTILINE)
+_DTSTART_UTC = re.compile(r"^DTSTART:(\d{8})T\d{6}Z\r?$", re.MULTILINE)
 
 
 def split_vevents(data: bytes) -> dict[str, str]:

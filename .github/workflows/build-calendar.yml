@@ -1,0 +1,45 @@
+# .github/workflows/build-calendar.yml
+name: Build UFC calendar
+
+on:
+  schedule:
+    - cron: "0 9 * * *"     # 09:00 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-calendar
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dev dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest tests/ -q
+
+      - name: Build the calendar
+        run: python -m src.build
+
+      - name: Commit if changed
+        run: |
+          if [[ -z "$(git status --porcelain UFC_Events.ics pfn_ledger.json)" ]]; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add UFC_Events.ics pfn_ledger.json
+          git commit -m "chore: refresh UFC calendar feed"
+          git push
