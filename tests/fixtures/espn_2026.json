@@ -1,0 +1,5617 @@
+{
+ "events": [
+  {
+   "id": "600057024",
+   "name": "UFC 324: Gaethje vs. Pimblett",
+   "date": "2026-01-24T22:30Z",
+   "competitions": [
+    {
+     "date": "2026-01-24T22:30Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-24T22:30Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T00:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T00:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T00:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T00:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-25T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600057025",
+   "name": "UFC 325: Volkanovski vs. Lopes 2",
+   "date": "2026-01-31T22:00Z",
+   "competitions": [
+    {
+     "date": "2026-01-31T22:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-31T22:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-31T22:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-01-31T22:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T00:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T00:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T00:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T00:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T02:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T02:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T02:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T02:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-01T02:00Z",
+     "venue": {
+      "id": "5415",
+      "fullName": "Qudos Bank Arena",
+      "address": {
+       "city": "Sydney",
+       "state": "NSW",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600057328",
+   "name": "UFC Fight Night: Bautista vs. Oliveira",
+   "date": "2026-02-07T22:00Z",
+   "competitions": [
+    {
+     "date": "2026-02-07T22:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-07T22:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-07T22:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-07T22:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-07T22:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-07T22:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-07T22:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-08T01:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-08T01:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-08T01:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-08T01:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-08T01:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-08T01:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600057329",
+   "name": "UFC Fight Night: Strickland vs. Hernandez",
+   "date": "2026-02-21T22:00Z",
+   "competitions": [
+    {
+     "date": "2026-02-21T22:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-21T22:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-21T22:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-21T22:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-21T22:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-21T22:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-21T22:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-21T22:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-22T01:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-22T01:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-22T01:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-22T01:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-22T01:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-22T01:00Z",
+     "venue": {
+      "id": "1394",
+      "fullName": "Toyota Center (Houston)",
+      "address": {
+       "city": "Houston",
+       "state": "TX",
+       "address1": "1510 POLK STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600057330",
+   "name": "UFC Fight Night: Moreno vs. Kavanagh",
+   "date": "2026-02-28T22:00Z",
+   "competitions": [
+    {
+     "date": "2026-02-28T22:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-28T22:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-28T22:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-28T22:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-28T22:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-28T22:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-02-28T22:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-01T01:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-01T01:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-01T01:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-01T01:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-01T01:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-01T01:00Z",
+     "venue": {
+      "id": "5779",
+      "fullName": "Arena CDMX",
+      "address": {
+       "city": "Mexico City",
+       "country": "Mexico"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600057326",
+   "name": "UFC 326: Holloway vs. Oliveira 2",
+   "date": "2026-03-07T22:30Z",
+   "competitions": [
+    {
+     "date": "2026-03-07T22:30Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-07T22:30Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-07T22:30Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T00:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T00:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T00:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T00:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-08T02:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600057364",
+   "name": "UFC Fight Night: Emmett vs. Vallejos",
+   "date": "2026-03-14T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-03-14T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-14T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-14T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-14T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-14T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-14T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-14T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-14T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-15T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-15T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-15T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-15T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-15T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-15T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600057365",
+   "name": "UFC Fight Night: Evloev vs. Murphy",
+   "date": "2026-03-21T17:00Z",
+   "competitions": [
+    {
+     "date": "2026-03-21T17:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T17:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T17:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T17:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T17:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T17:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T17:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T20:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T20:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T20:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T20:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T20:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-21T20:00Z",
+     "venue": {
+      "id": "2590",
+      "fullName": "O2 Arena (ENG)",
+      "address": {
+       "city": "London",
+       "country": "England"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600057366",
+   "name": "UFC Fight Night: Adesanya vs. Pyfer",
+   "date": "2026-03-28T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-03-28T21:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-28T21:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-28T21:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-28T21:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-28T21:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-28T21:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-28T21:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-29T00:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-29T00:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-29T00:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-29T00:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-29T00:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-03-29T00:00Z",
+     "venue": {
+      "id": "7224",
+      "fullName": "Climate Pledge Arena",
+      "address": {
+       "city": "Seattle",
+       "state": "WA",
+       "address1": "334 1st Ave. N.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058693",
+   "name": "UFC Fight Night: Moicano vs. Duncan",
+   "date": "2026-04-04T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-04-04T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-04T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-04T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-04T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-04T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-04T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-04T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-05T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-05T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-05T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-05T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-05T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-05T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058745",
+   "name": "UFC 327: Procházka vs. Ulberg",
+   "date": "2026-04-11T21:30Z",
+   "competitions": [
+    {
+     "date": "2026-04-11T21:30Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-11T21:30Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-11T21:30Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-11T23:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-11T23:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-11T23:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-11T23:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-12T01:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-12T01:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-12T01:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-12T01:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-12T01:00Z",
+     "venue": {
+      "id": "3438",
+      "fullName": "Kaseya Center",
+      "address": {
+       "city": "Miami",
+       "state": "FL",
+       "address1": "AMERICAN AIRLINES ARENA,  601 BISCAYNE BLVD.",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058725",
+   "name": "UFC Fight Night: Burns vs. Malott",
+   "date": "2026-04-18T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-04-18T21:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-18T21:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-18T21:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-18T21:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-18T21:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-18T21:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-18T21:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-19T00:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-19T00:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-19T00:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-19T00:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-19T00:00Z",
+     "venue": {
+      "id": "1397",
+      "fullName": "Canada Life Centre",
+      "address": {
+       "city": "Winnipeg",
+       "state": "MB",
+       "address1": "300 PORTAGE AVENUE",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058746",
+   "name": "UFC Fight Night: Sterling vs. Zalal",
+   "date": "2026-04-25T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-04-25T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-25T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-25T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-25T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-25T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-25T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-25T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-26T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-26T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-26T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-26T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-26T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-04-26T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058807",
+   "name": "UFC Fight Night: Della Maddalena vs. Prates",
+   "date": "2026-05-02T08:00Z",
+   "competitions": [
+    {
+     "date": "2026-05-02T08:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T08:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T08:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T08:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T08:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T08:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T08:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T11:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T11:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T11:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T11:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T11:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-02T11:00Z",
+     "venue": {
+      "id": "6524",
+      "fullName": "RAC Arena (AUS)",
+      "address": {
+       "city": "Perth",
+       "state": "WA",
+       "country": "Australia"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058947",
+   "name": "UFC 328: Chimaev vs. Strickland",
+   "date": "2026-05-09T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-05-09T21:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-09T21:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-09T21:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-09T21:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-09T23:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-09T23:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-09T23:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-09T23:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-10T01:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-10T01:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-10T01:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-10T01:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-10T01:00Z",
+     "venue": {
+      "id": "1826",
+      "fullName": "Prudential Center",
+      "address": {
+       "city": "Newark",
+       "state": "NJ",
+       "address1": "165 MULBERRY STREET",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058948",
+   "name": "UFC Fight Night: Allen vs. Costa",
+   "date": "2026-05-16T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-05-16T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-16T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-16T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-16T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-16T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-16T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-16T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-17T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-17T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-17T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-17T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-17T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-17T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058517",
+   "name": "UFC Fight Night: Song vs. Figueiredo",
+   "date": "2026-05-30T08:00Z",
+   "competitions": [
+    {
+     "date": "2026-05-30T08:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T08:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T08:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T08:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T08:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T08:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T08:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T11:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T11:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T11:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T11:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T11:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-05-30T11:00Z",
+     "venue": {
+      "id": "10671",
+      "fullName": "Galaxy Arena",
+      "address": {
+       "city": "Cotai",
+       "country": "Macau"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058949",
+   "name": "UFC Fight Night: Muhammad vs. Bonfim",
+   "date": "2026-06-06T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-06-06T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-06T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-06T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-06T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-06T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-06T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-06T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-07T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-07T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-07T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-07T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-07T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600058854",
+   "name": "UFC Freedom 250: Topuria vs. Gaethje",
+   "date": "2026-06-15T00:00Z",
+   "competitions": [
+    {
+     "date": "2026-06-15T00:00Z",
+     "venue": {
+      "id": "11901",
+      "fullName": "South Lawn of the White House",
+      "address": {
+       "city": "Washington",
+       "state": "DC",
+       "country": "USA"
+      },
+      "indoor": false
+     }
+    },
+    {
+     "date": "2026-06-15T00:00Z",
+     "venue": {
+      "id": "11901",
+      "fullName": "South Lawn of the White House",
+      "address": {
+       "city": "Washington",
+       "state": "DC",
+       "country": "USA"
+      },
+      "indoor": false
+     }
+    },
+    {
+     "date": "2026-06-15T00:00Z",
+     "venue": {
+      "id": "11901",
+      "fullName": "South Lawn of the White House",
+      "address": {
+       "city": "Washington",
+       "state": "DC",
+       "country": "USA"
+      },
+      "indoor": false
+     }
+    },
+    {
+     "date": "2026-06-15T00:00Z",
+     "venue": {
+      "id": "11901",
+      "fullName": "South Lawn of the White House",
+      "address": {
+       "city": "Washington",
+       "state": "DC",
+       "country": "USA"
+      },
+      "indoor": false
+     }
+    },
+    {
+     "date": "2026-06-15T00:00Z",
+     "venue": {
+      "id": "11901",
+      "fullName": "South Lawn of the White House",
+      "address": {
+       "city": "Washington",
+       "state": "DC",
+       "country": "USA"
+      },
+      "indoor": false
+     }
+    },
+    {
+     "date": "2026-06-15T00:00Z",
+     "venue": {
+      "id": "11901",
+      "fullName": "South Lawn of the White House",
+      "address": {
+       "city": "Washington",
+       "state": "DC",
+       "country": "USA"
+      },
+      "indoor": false
+     }
+    },
+    {
+     "date": "2026-06-15T00:00Z",
+     "venue": {
+      "id": "11901",
+      "fullName": "South Lawn of the White House",
+      "address": {
+       "city": "Washington",
+       "state": "DC",
+       "country": "USA"
+      },
+      "indoor": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "600059467",
+   "name": "UFC Fight Night: Kape vs. Horiguchi 2",
+   "date": "2026-06-20T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-06-20T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-20T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-20T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-20T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-20T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-20T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-20T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-21T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-21T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-21T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-21T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-21T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600059254",
+   "name": "UFC Fight Night: Fiziev vs. Torres",
+   "date": "2026-06-27T13:00Z",
+   "competitions": [
+    {
+     "date": "2026-06-27T13:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T13:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T13:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T13:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T13:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T13:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T13:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T16:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T16:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T16:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T16:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T16:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-06-27T16:00Z",
+     "venue": {
+      "id": "7580",
+      "fullName": "National Gymnastics Arena",
+      "address": {
+       "city": "Baku",
+       "country": "Azerbaijan"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600059148",
+   "name": "UFC 329: McGregor vs. Holloway 2",
+   "date": "2026-07-11T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-07-11T21:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-11T21:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-11T21:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-11T21:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-11T21:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-11T23:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-11T23:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-11T23:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-11T23:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-12T01:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-12T01:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-12T01:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-12T01:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-12T01:00Z",
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600059599",
+   "name": "UFC Fight Night: Du Plessis vs. Usman",
+   "date": "2026-07-18T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-07-18T21:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-18T21:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-18T21:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-18T21:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-18T21:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-18T21:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-18T21:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-19T00:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-19T00:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-19T00:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-19T00:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-19T00:00Z",
+     "venue": {
+      "id": "2559",
+      "fullName": "Paycom Center",
+      "address": {
+       "city": "Oklahoma City",
+       "state": "OK",
+       "address1": "100 W Reno Ave",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600059667",
+   "name": "UFC Fight Night: Ankalaev vs. Guskov",
+   "date": "2026-07-25T13:00Z",
+   "competitions": [
+    {
+     "date": "2026-07-25T13:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T13:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T13:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T13:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T13:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T13:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T13:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T16:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T16:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T16:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T16:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-07-25T16:00Z",
+     "venue": {
+      "id": "7126",
+      "fullName": "Etihad Arena",
+      "address": {
+       "city": "Abu Dhabi",
+       "country": "United Arab Emirates"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600059339",
+   "name": "UFC Fight Night: Medić vs. Rodriguez",
+   "date": "2026-08-01T14:00Z",
+   "competitions": [
+    {
+     "date": "2026-08-01T14:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T14:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T14:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T14:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T14:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T14:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T14:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T14:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T17:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T17:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T17:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T17:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T17:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-01T17:00Z",
+     "venue": {
+      "id": "3115",
+      "fullName": "Belgrade Arena",
+      "address": {
+       "city": "Belgrade",
+       "country": "Serbia"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060621",
+   "name": "UFC Fight Night: Gamrot vs Salkilld",
+   "date": "2026-08-08T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-08-08T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-08T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-08T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-08T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-08T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-08T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-08T21:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-09T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-09T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-09T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-09T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-09T00:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060732",
+   "name": "Dana White's Contender Series: Season 10, Week 1",
+   "date": "2026-08-11T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-08-11T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-11T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-11T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-11T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-11T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600059185",
+   "name": "UFC 330: Makhachev vs. Machado Garry",
+   "date": "2026-08-15T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-08-15T21:30Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-15T21:30Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-15T21:30Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-15T23:00Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-15T23:00Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-15T23:00Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-15T23:00Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-16T01:00Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-16T01:00Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-16T01:00Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-16T01:00Z",
+     "venue": {
+      "id": "1845",
+      "fullName": "Xfinity Mobile Arena",
+      "address": {
+       "city": "Philadelphia",
+       "state": "PA",
+       "address1": "3601 Broad Street",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060733",
+   "name": "Dana White's Contender Series: Season 10, Week 2",
+   "date": "2026-08-18T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-08-18T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-18T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-18T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-18T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-18T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060493",
+   "name": "UFC Fight Night: Hernandez vs. Rodrigues",
+   "date": "2026-08-22T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-08-22T21:00Z",
+     "venue": {
+      "id": "5310",
+      "fullName": "Golden 1 Center",
+      "address": {
+       "city": "Sacramento",
+       "state": "CA",
+       "address1": "500 David J. Stern Walk",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-22T21:00Z",
+     "venue": {
+      "id": "5310",
+      "fullName": "Golden 1 Center",
+      "address": {
+       "city": "Sacramento",
+       "state": "CA",
+       "address1": "500 David J. Stern Walk",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-22T21:00Z",
+     "venue": {
+      "id": "5310",
+      "fullName": "Golden 1 Center",
+      "address": {
+       "city": "Sacramento",
+       "state": "CA",
+       "address1": "500 David J. Stern Walk",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-23T00:00Z",
+     "venue": {
+      "id": "5310",
+      "fullName": "Golden 1 Center",
+      "address": {
+       "city": "Sacramento",
+       "state": "CA",
+       "address1": "500 David J. Stern Walk",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-23T00:00Z",
+     "venue": {
+      "id": "5310",
+      "fullName": "Golden 1 Center",
+      "address": {
+       "city": "Sacramento",
+       "state": "CA",
+       "address1": "500 David J. Stern Walk",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-23T00:00Z",
+     "venue": {
+      "id": "5310",
+      "fullName": "Golden 1 Center",
+      "address": {
+       "city": "Sacramento",
+       "state": "CA",
+       "address1": "500 David J. Stern Walk",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-23T00:00Z",
+     "venue": {
+      "id": "5310",
+      "fullName": "Golden 1 Center",
+      "address": {
+       "city": "Sacramento",
+       "state": "CA",
+       "address1": "500 David J. Stern Walk",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-23T00:00Z",
+     "venue": {
+      "id": "5310",
+      "fullName": "Golden 1 Center",
+      "address": {
+       "city": "Sacramento",
+       "state": "CA",
+       "address1": "500 David J. Stern Walk",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060734",
+   "name": "Dana White's Contender Series: Season 10, Week 3",
+   "date": "2026-08-25T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-08-25T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060620",
+   "name": "UFC Fight Night: Nurmagomedov vs. Song",
+   "date": "2026-08-29T07:00Z",
+   "competitions": [
+    {
+     "date": "2026-08-29T07:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-29T07:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-29T07:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-29T07:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-29T10:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-29T10:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-29T10:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-29T10:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-08-29T10:00Z",
+     "venue": {
+      "id": "5418",
+      "fullName": "Shanghai Oriental Sports Center",
+      "address": {
+       "city": "Shanghai",
+       "country": "China"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060735",
+   "name": "Dana White's Contender Series: Season 10, Week 4",
+   "date": "2026-09-01T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-09-01T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600059993",
+   "name": "UFC Fight Night: Hooker vs. Parnasse",
+   "date": "2026-09-05T16:00Z",
+   "competitions": [
+    {
+     "date": "2026-09-05T16:00Z",
+     "venue": {
+      "id": "10660",
+      "fullName": "Accor Arena",
+      "address": {
+       "city": "Paris",
+       "country": "France"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-05T16:00Z",
+     "venue": {
+      "id": "10660",
+      "fullName": "Accor Arena",
+      "address": {
+       "city": "Paris",
+       "country": "France"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-05T19:00Z",
+     "venue": {
+      "id": "10660",
+      "fullName": "Accor Arena",
+      "address": {
+       "city": "Paris",
+       "country": "France"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-05T16:00Z",
+     "venue": {
+      "id": "10660",
+      "fullName": "Accor Arena",
+      "address": {
+       "city": "Paris",
+       "country": "France"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-05T16:00Z",
+     "venue": {
+      "id": "10660",
+      "fullName": "Accor Arena",
+      "address": {
+       "city": "Paris",
+       "country": "France"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-05T19:00Z",
+     "venue": {
+      "id": "10660",
+      "fullName": "Accor Arena",
+      "address": {
+       "city": "Paris",
+       "country": "France"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-05T19:00Z",
+     "venue": {
+      "id": "10660",
+      "fullName": "Accor Arena",
+      "address": {
+       "city": "Paris",
+       "country": "France"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060736",
+   "name": "Dana White's Contender Series: Season 10, Week 5",
+   "date": "2026-09-08T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-09-08T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060772",
+   "name": "Noche UFC: Rodriguez vs. Silva",
+   "date": "2026-09-12T18:00Z",
+   "competitions": [
+    {
+     "date": "2026-09-12T18:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-12T18:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-12T18:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-12T21:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-12T21:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-12T21:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-12T21:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-12T21:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-12T21:00Z",
+     "venue": {
+      "id": "1829",
+      "fullName": "Desert Diamond Arena",
+      "address": {
+       "city": "Glendale",
+       "state": "AZ",
+       "address1": "9400 W. MARYLAND AVENUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060737",
+   "name": "Dana White's Contender Series: Season 10, Week 6",
+   "date": "2026-09-15T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-09-15T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060963",
+   "name": "UFC 331: Van vs. Pantoja 2",
+   "date": "2026-09-19T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-09-19T21:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-19T21:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-19T21:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-19T23:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-19T23:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-19T23:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-19T23:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-19T23:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-20T01:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-20T01:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-20T01:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-20T01:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-09-20T01:00Z",
+     "venue": {
+      "id": "1841",
+      "fullName": "crypto.com Arena",
+      "address": {
+       "city": "Los Angeles",
+       "state": "CA",
+       "address1": "STAPLES CENTER,  1111 S. FIGUE",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060738",
+   "name": "Dana White's Contender Series: Season 10, Week 7",
+   "date": "2026-09-22T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-09-22T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060739",
+   "name": "Dana White's Contender Series: Season 10, Week 8",
+   "date": "2026-09-29T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-09-29T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060740",
+   "name": "Dana White's Contender Series: Season 10, Week 9",
+   "date": "2026-10-06T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-10-06T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060741",
+   "name": "Dana White's Contender Series: Season 10, Week 10",
+   "date": "2026-10-13T23:00Z",
+   "competitions": [
+    {
+     "date": "2026-10-13T23:00Z",
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "600060773",
+   "name": "UFC Fight Night: Buckley vs. Malott",
+   "date": "2026-10-17T21:00Z",
+   "competitions": [
+    {
+     "date": "2026-10-17T21:00Z",
+     "venue": {
+      "id": "5282",
+      "fullName": "Rogers Place",
+      "address": {
+       "city": "Edmonton",
+       "state": "AB",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-10-17T21:00Z",
+     "venue": {
+      "id": "5282",
+      "fullName": "Rogers Place",
+      "address": {
+       "city": "Edmonton",
+       "state": "AB",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    },
+    {
+     "date": "2026-10-18T00:00Z",
+     "venue": {
+      "id": "5282",
+      "fullName": "Rogers Place",
+      "address": {
+       "city": "Edmonton",
+       "state": "AB",
+       "country": "Canada"
+      },
+      "indoor": true
+     }
+    }
+   ]
+  }
+ ]
+}
