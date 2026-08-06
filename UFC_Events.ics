@@ -1,113 +1,531 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//UFC Events//EN
+PRODID:-//pasosalcostado//UFC Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:UFC Events
 BEGIN:VEVENT
-UID:ff3066ccffabb56a08a92b62b92741f1@ufc-calendar
-DTSTART;VALUE=DATE:20260314
-DTEND;VALUE=DATE:20260315
-SUMMARY:UFC Fight Night: Emmett vs. Vallejos
-LOCATION:Las Vegas, NV
+UID:ufc-600057024@pasosalcostado.github.io
+DTSTART:20260125T020000Z
+DURATION:PT3H
+SUMMARY:UFC 324: Gaethje vs Pimblett
+DESCRIPTION:UFC 324: Gaethje vs Pimblett\nType: Numbered event\nFirst bout:
+  22:30 UTC (3h30m before main card)\nVenue: T-Mobile Arena\, Las Vegas\, N
+ V\nhttps://www.espn.com/mma/fightcenter/_/id/600057024
+LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
-UID:497910a39bd69c24e9d6e274e543563f@ufc-calendar
-DTSTART;VALUE=DATE:20260321
-DTEND;VALUE=DATE:20260322
-SUMMARY:UFC Fight Night: Evloev vs. Murphy
-LOCATION:London, England
+UID:ufc-600057025@pasosalcostado.github.io
+DTSTART:20260201T020000Z
+DURATION:PT3H
+SUMMARY:UFC 325: Volkanovski vs Lopes 2
+DESCRIPTION:UFC 325: Volkanovski vs Lopes 2\nType: Numbered event\nFirst bo
+ ut: 22:00 UTC (4h00m before main card)\nVenue: Qudos Bank Arena\, Sydney\,
+  NSW\nhttps://www.espn.com/mma/fightcenter/_/id/600057025
+LOCATION:Sydney\, NSW
 END:VEVENT
 BEGIN:VEVENT
-UID:205590480b573ef6715fc512bcc22b08@ufc-calendar
-DTSTART;VALUE=DATE:20260328
-DTEND;VALUE=DATE:20260329
-SUMMARY:UFC Fight Night: Adesanya vs. Pyfer
-LOCATION:Seattle, WA
+UID:ufc-600057326@pasosalcostado.github.io
+DTSTART:20260308T020000Z
+DURATION:PT3H
+SUMMARY:UFC 326: Holloway vs Oliveira 2
+DESCRIPTION:UFC 326: Holloway vs Oliveira 2\nType: Numbered event\nFirst bo
+ ut: 22:30 UTC (3h30m before main card)\nVenue: T-Mobile Arena\, Las Vegas\
+ , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600057326
+LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
-UID:3e754e6257a45f65d496374a590d6d99@ufc-calendar
-DTSTART;VALUE=DATE:20260404
-DTEND;VALUE=DATE:20260405
-SUMMARY:UFC Fight Night: Moicano vs. Duncan
-LOCATION:Las Vegas, NV
+UID:ufc-600057328@pasosalcostado.github.io
+DTSTART:20260208T010000Z
+DURATION:PT3H
+SUMMARY:PFN 1: Bautista vs Oliveira
+DESCRIPTION:UFC Fight Night: Bautista vs Oliveira\nParamount Fight Night 1\
+ nFirst bout: 22:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Ve
+ gas\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600057328
+LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
-UID:9635d0b9c16c86b05cb1770b562beb72@ufc-calendar
-DTSTART;VALUE=DATE:20260411
-DTEND;VALUE=DATE:20260412
-SUMMARY:UFC 327: Prochazka vs. Ulberg
-LOCATION:Miami, FL
+UID:ufc-600057329@pasosalcostado.github.io
+DTSTART:20260222T010000Z
+DURATION:PT3H
+SUMMARY:PFN 2: Strickland vs Hernandez
+DESCRIPTION:UFC Fight Night: Strickland vs Hernandez\nParamount Fight Night
+  2\nFirst bout: 22:00 UTC (3h00m before main card)\nVenue: Toyota Center (
+ Houston)\, Houston\, TX\nhttps://www.espn.com/mma/fightcenter/_/id/6000573
+ 29
+LOCATION:Houston\, TX
 END:VEVENT
 BEGIN:VEVENT
-UID:af7dc50409821a66f5602e5adb6996b1@ufc-calendar
+UID:ufc-600057330@pasosalcostado.github.io
+DTSTART:20260301T010000Z
+DURATION:PT3H
+SUMMARY:PFN 3: Moreno vs Kavanagh
+DESCRIPTION:UFC Fight Night: Moreno vs Kavanagh\nParamount Fight Night 3\nF
+ irst bout: 22:00 UTC (3h00m before main card)\nVenue: Arena CDMX\, Mexico 
+ City\, Mexico\nhttps://www.espn.com/mma/fightcenter/_/id/600057330
+LOCATION:Mexico City\, Mexico
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600057364@pasosalcostado.github.io
+DTSTART:20260315T000000Z
+DURATION:PT3H
+SUMMARY:PFN 4: Emmett vs Vallejos
+DESCRIPTION:UFC Fight Night: Emmett vs Vallejos\nParamount Fight Night 4\nF
+ irst bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vega
+ s\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600057364
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600057365@pasosalcostado.github.io
+DTSTART:20260321T200000Z
+DURATION:PT3H
+SUMMARY:PFN 5: Evloev vs Murphy
+DESCRIPTION:UFC Fight Night: Evloev vs Murphy\nParamount Fight Night 5\nFir
+ st bout: 17:00 UTC (3h00m before main card)\nVenue: O2 Arena (ENG)\, Londo
+ n\, England\nhttps://www.espn.com/mma/fightcenter/_/id/600057365
+LOCATION:London\, England
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600057366@pasosalcostado.github.io
+DTSTART:20260329T000000Z
+DURATION:PT3H
+SUMMARY:PFN 6: Adesanya vs Pyfer
+DESCRIPTION:UFC Fight Night: Adesanya vs Pyfer\nParamount Fight Night 6\nFi
+ rst bout: 21:00 UTC (3h00m before main card)\nVenue: Climate Pledge Arena\
+ , Seattle\, WA\nhttps://www.espn.com/mma/fightcenter/_/id/600057366
+LOCATION:Seattle\, WA
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058517@pasosalcostado.github.io
+DTSTART:20260530T110000Z
+DURATION:PT3H
+SUMMARY:PFN 12: Song vs Figueiredo
+DESCRIPTION:UFC Fight Night: Song vs Figueiredo\nParamount Fight Night 12\n
+ First bout: 08:00 UTC (3h00m before main card)\nVenue: Galaxy Arena\, Cota
+ i\, Macau\nhttps://www.espn.com/mma/fightcenter/_/id/600058517
+LOCATION:Cotai\, Macau
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058693@pasosalcostado.github.io
+DTSTART:20260405T000000Z
+DURATION:PT3H
+SUMMARY:PFN 7: Moicano vs Duncan
+DESCRIPTION:UFC Fight Night: Moicano vs Duncan\nParamount Fight Night 7\nFi
+ rst bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas
+ \, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600058693
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058725@pasosalcostado.github.io
+DTSTART:20260419T000000Z
+DURATION:PT3H
+SUMMARY:PFN 8: Burns vs Malott
+DESCRIPTION:UFC Fight Night: Burns vs Malott\nParamount Fight Night 8\nFirs
+ t bout: 21:00 UTC (3h00m before main card)\nVenue: Canada Life Centre\, Wi
+ nnipeg\, MB\nhttps://www.espn.com/mma/fightcenter/_/id/600058725
+LOCATION:Winnipeg\, MB
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058745@pasosalcostado.github.io
+DTSTART:20260412T010000Z
+DURATION:PT3H
+SUMMARY:UFC 327: Procházka vs Ulberg
+DESCRIPTION:UFC 327: Procházka vs Ulberg\nType: Numbered event\nFirst bout
+ : 21:30 UTC (3h30m before main card)\nVenue: Kaseya Center\, Miami\, FL\nh
+ ttps://www.espn.com/mma/fightcenter/_/id/600058745
+LOCATION:Miami\, FL
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058746@pasosalcostado.github.io
+DTSTART:20260426T000000Z
+DURATION:PT3H
+SUMMARY:PFN 9: Sterling vs Zalal
+DESCRIPTION:UFC Fight Night: Sterling vs Zalal\nParamount Fight Night 9\nFi
+ rst bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas
+ \, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600058746
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058807@pasosalcostado.github.io
+DTSTART:20260502T110000Z
+DURATION:PT3H
+SUMMARY:PFN 10: Della Maddalena vs Prates
+DESCRIPTION:UFC Fight Night: Della Maddalena vs Prates\nParamount Fight Nig
+ ht 10\nFirst bout: 08:00 UTC (3h00m before main card)\nVenue: RAC Arena (A
+ US)\, Perth\, WA\nhttps://www.espn.com/mma/fightcenter/_/id/600058807
+LOCATION:Perth\, WA
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058854@pasosalcostado.github.io
+DTSTART:20260615T000000Z
+DURATION:PT3H
+SUMMARY:UFC Freedom 250: Topuria vs Gaethje
+DESCRIPTION:UFC Freedom 250: Topuria vs Gaethje\nType: Special\nVenue: Sout
+ h Lawn of the White House\, Washington\, DC\nhttps://www.espn.com/mma/figh
+ tcenter/_/id/600058854
+LOCATION:Washington\, DC
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058947@pasosalcostado.github.io
+DTSTART:20260510T010000Z
+DURATION:PT3H
+SUMMARY:UFC 328: Chimaev vs Strickland
+DESCRIPTION:UFC 328: Chimaev vs Strickland\nType: Numbered event\nFirst bou
+ t: 21:00 UTC (4h00m before main card)\nVenue: Prudential Center\, Newark\,
+  NJ\nhttps://www.espn.com/mma/fightcenter/_/id/600058947
+LOCATION:Newark\, NJ
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058948@pasosalcostado.github.io
+DTSTART:20260517T000000Z
+DURATION:PT3H
+SUMMARY:PFN 11: Allen vs Costa
+DESCRIPTION:UFC Fight Night: Allen vs Costa\nParamount Fight Night 11\nFirs
+ t bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas\,
+  NV\nhttps://www.espn.com/mma/fightcenter/_/id/600058948
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600058949@pasosalcostado.github.io
+DTSTART:20260607T000000Z
+DURATION:PT3H
+SUMMARY:PFN 13: Muhammad vs Bonfim
+DESCRIPTION:UFC Fight Night: Muhammad vs Bonfim\nParamount Fight Night 13\n
+ First bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Veg
+ as\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600058949
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600059148@pasosalcostado.github.io
+DTSTART:20260712T010000Z
+DURATION:PT3H
+SUMMARY:UFC 329: McGregor vs Holloway 2
+DESCRIPTION:UFC 329: McGregor vs Holloway 2\nType: Numbered event\nFirst bo
+ ut: 21:00 UTC (4h00m before main card)\nVenue: T-Mobile Arena\, Las Vegas\
+ , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600059148
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600059185@pasosalcostado.github.io
+DTSTART:20260816T010000Z
+DURATION:PT3H
+SUMMARY:UFC 330: Makhachev vs Machado Garry
+DESCRIPTION:UFC 330: Makhachev vs Machado Garry\nType: Numbered event\nFirs
+ t bout: 21:30 UTC (3h30m before main card)\nVenue: Xfinity Mobile Arena\, 
+ Philadelphia\, PA\nhttps://www.espn.com/mma/fightcenter/_/id/600059185
+LOCATION:Philadelphia\, PA
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600059254@pasosalcostado.github.io
+DTSTART:20260627T160000Z
+DURATION:PT3H
+SUMMARY:PFN 15: Fiziev vs Torres
+DESCRIPTION:UFC Fight Night: Fiziev vs Torres\nParamount Fight Night 15\nFi
+ rst bout: 13:00 UTC (3h00m before main card)\nVenue: National Gymnastics A
+ rena\, Baku\, Azerbaijan\nhttps://www.espn.com/mma/fightcenter/_/id/600059
+ 254
+LOCATION:Baku\, Azerbaijan
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600059339@pasosalcostado.github.io
+DTSTART:20260801T170000Z
+DURATION:PT3H
+SUMMARY:PFN 18: Medić vs Rodriguez
+DESCRIPTION:UFC Fight Night: Medić vs Rodriguez\nParamount Fight Night 18\
+ nFirst bout: 14:00 UTC (3h00m before main card)\nVenue: Belgrade Arena\, B
+ elgrade\, Serbia\nhttps://www.espn.com/mma/fightcenter/_/id/600059339
+LOCATION:Belgrade\, Serbia
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600059467@pasosalcostado.github.io
+DTSTART:20260621T000000Z
+DURATION:PT3H
+SUMMARY:PFN 14: Kape vs Horiguchi 2
+DESCRIPTION:UFC Fight Night: Kape vs Horiguchi 2\nParamount Fight Night 14\
+ nFirst bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Ve
+ gas\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600059467
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600059599@pasosalcostado.github.io
+DTSTART:20260719T000000Z
+DURATION:PT3H
+SUMMARY:PFN 16: Du Plessis vs Usman
+DESCRIPTION:UFC Fight Night: Du Plessis vs Usman\nParamount Fight Night 16\
+ nFirst bout: 21:00 UTC (3h00m before main card)\nVenue: Paycom Center\, Ok
+ lahoma City\, OK\nhttps://www.espn.com/mma/fightcenter/_/id/600059599
+LOCATION:Oklahoma City\, OK
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600059667@pasosalcostado.github.io
+DTSTART:20260725T160000Z
+DURATION:PT3H
+SUMMARY:PFN 17: Ankalaev vs Guskov
+DESCRIPTION:UFC Fight Night: Ankalaev vs Guskov\nParamount Fight Night 17\n
+ First bout: 13:00 UTC (3h00m before main card)\nVenue: Etihad Arena\, Abu 
+ Dhabi\, United Arab Emirates\nhttps://www.espn.com/mma/fightcenter/_/id/60
+ 0059667
+LOCATION:Abu Dhabi\, United Arab Emirates
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600059993@pasosalcostado.github.io
+DTSTART:20260905T190000Z
+DURATION:PT3H
+SUMMARY:PFN 22: Hooker vs Parnasse
+DESCRIPTION:UFC Fight Night: Hooker vs Parnasse\nParamount Fight Night 22\n
+ First bout: 16:00 UTC (3h00m before main card)\nVenue: Accor Arena\, Paris
+ \, France\nhttps://www.espn.com/mma/fightcenter/_/id/600059993
+LOCATION:Paris\, France
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060493@pasosalcostado.github.io
+DTSTART:20260823T000000Z
+DURATION:PT3H
+SUMMARY:PFN 20: Hernandez vs Rodrigues
+DESCRIPTION:UFC Fight Night: Hernandez vs Rodrigues\nParamount Fight Night 
+ 20\nFirst bout: 21:00 UTC (3h00m before main card)\nVenue: Golden 1 Center
+ \, Sacramento\, CA\nhttps://www.espn.com/mma/fightcenter/_/id/600060493
+LOCATION:Sacramento\, CA
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060620@pasosalcostado.github.io
+DTSTART:20260829T100000Z
+DURATION:PT3H
+SUMMARY:PFN 21: Nurmagomedov vs Song
+DESCRIPTION:UFC Fight Night: Nurmagomedov vs Song\nParamount Fight Night 21
+ \nFirst bout: 07:00 UTC (3h00m before main card)\nVenue: Shanghai Oriental
+  Sports Center\, Shanghai\, China\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060620
+LOCATION:Shanghai\, China
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060621@pasosalcostado.github.io
+DTSTART:20260809T000000Z
+DURATION:PT3H
+SUMMARY:PFN 19: Gamrot vs Salkilld
+DESCRIPTION:UFC Fight Night: Gamrot vs Salkilld\nParamount Fight Night 19\n
+ First bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Veg
+ as\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600060621
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060732@pasosalcostado.github.io
+DTSTART:20260811T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W1
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 1\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060732
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060733@pasosalcostado.github.io
+DTSTART:20260818T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W2
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 2\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060733
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060734@pasosalcostado.github.io
+DTSTART:20260825T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W3
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 3\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060734
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060735@pasosalcostado.github.io
+DTSTART:20260901T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W4
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 4\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060735
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060736@pasosalcostado.github.io
+DTSTART:20260908T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W5
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 5\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060736
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060737@pasosalcostado.github.io
+DTSTART:20260915T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W6
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 6\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060737
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060738@pasosalcostado.github.io
+DTSTART:20260922T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W7
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 7\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060738
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060739@pasosalcostado.github.io
+DTSTART:20260929T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W8
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 8\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060739
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060740@pasosalcostado.github.io
+DTSTART:20261006T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W9
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 9\nType: DWCS\n
+ Venue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/
+ id/600060740
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060741@pasosalcostado.github.io
+DTSTART:20261013T230000Z
+DURATION:PT3H
+SUMMARY:DWCS S10 W10
+DESCRIPTION:Dana White's Contender Series: Season 10\, Week 10\nType: DWCS\
+ nVenue: Meta APEX\, Las Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_
+ /id/600060741
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060772@pasosalcostado.github.io
+DTSTART:20260912T210000Z
+DURATION:PT3H
+SUMMARY:Noche UFC: Rodriguez vs Silva
+DESCRIPTION:Noche UFC: Rodriguez vs Silva\nParamount Fight Night 23\nFirst 
+ bout: 18:00 UTC (3h00m before main card)\nVenue: Desert Diamond Arena\, Gl
+ endale\, AZ\nhttps://www.espn.com/mma/fightcenter/_/id/600060772
+LOCATION:Glendale\, AZ
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060773@pasosalcostado.github.io
+DTSTART:20261018T000000Z
+DURATION:PT3H
+SUMMARY:PFN 24: Buckley vs Malott
+DESCRIPTION:UFC Fight Night: Buckley vs Malott\nParamount Fight Night 24\nF
+ irst bout: 21:00 UTC (3h00m before main card)\nVenue: Rogers Place\, Edmon
+ ton\, AB\nhttps://www.espn.com/mma/fightcenter/_/id/600060773
+LOCATION:Edmonton\, AB
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600060963@pasosalcostado.github.io
+DTSTART:20260920T010000Z
+DURATION:PT3H
+SUMMARY:UFC 331: Van vs Pantoja 2
+DESCRIPTION:UFC 331: Van vs Pantoja 2\nType: Numbered event\nFirst bout: 21
+ :00 UTC (4h00m before main card)\nVenue: crypto.com Arena\, Los Angeles\, 
+ CA\nhttps://www.espn.com/mma/fightcenter/_/id/600060963
+LOCATION:Los Angeles\, CA
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600057024@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260109
+DTEND;VALUE=DATE:20260110
+SUMMARY:Countdown: UFC 324
+DESCRIPTION:UFC 324: Gaethje vs Pimblett\nType: Numbered event\nFirst bout:
+  22:30 UTC (3h30m before main card)\nVenue: T-Mobile Arena\, Las Vegas\, N
+ V\nhttps://www.espn.com/mma/fightcenter/_/id/600057024
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600057025@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260116
+DTEND;VALUE=DATE:20260117
+SUMMARY:Countdown: UFC 325
+DESCRIPTION:UFC 325: Volkanovski vs Lopes 2\nType: Numbered event\nFirst bo
+ ut: 22:00 UTC (4h00m before main card)\nVenue: Qudos Bank Arena\, Sydney\,
+  NSW\nhttps://www.espn.com/mma/fightcenter/_/id/600057025
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600057326@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260220
+DTEND;VALUE=DATE:20260221
+SUMMARY:Countdown: UFC 326
+DESCRIPTION:UFC 326: Holloway vs Oliveira 2\nType: Numbered event\nFirst bo
+ ut: 22:30 UTC (3h30m before main card)\nVenue: T-Mobile Arena\, Las Vegas\
+ , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600057326
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600058745@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20260327
 DTEND;VALUE=DATE:20260328
-SUMMARY:Countdown: UFC 327: Prochazka vs. Ulberg
+SUMMARY:Countdown: UFC 327
+DESCRIPTION:UFC 327: Procházka vs Ulberg\nType: Numbered event\nFirst bout
+ : 21:30 UTC (3h30m before main card)\nVenue: Kaseya Center\, Miami\, FL\nh
+ ttps://www.espn.com/mma/fightcenter/_/id/600058745
 END:VEVENT
 BEGIN:VEVENT
-UID:835d9bc1fe35f0fbfaf9be3bf62c3e59@ufc-calendar
-DTSTART;VALUE=DATE:20260418
-DTEND;VALUE=DATE:20260419
-SUMMARY:UFC Fight Night: Burns vs. Malott
-LOCATION:Winnipeg, Canada
-END:VEVENT
-BEGIN:VEVENT
-UID:8261f63119a33079c8aa97974f887183@ufc-calendar
-DTSTART;VALUE=DATE:20260425
-DTEND;VALUE=DATE:20260426
-SUMMARY:UFC Fight Night: Sterling vs. Zalal
-LOCATION:Las Vegas, NV
-END:VEVENT
-BEGIN:VEVENT
-UID:4cecae9fa2b9bec8b5943b02a703c639@ufc-calendar
-DTSTART;VALUE=DATE:20260502
-DTEND;VALUE=DATE:20260503
-SUMMARY:UFC Fight Night: Della Maddalena vs. Prates
-LOCATION:Perth, Australia
-END:VEVENT
-BEGIN:VEVENT
-UID:94735a63430f110d48946404f55d3243@ufc-calendar
-DTSTART;VALUE=DATE:20260509
-DTEND;VALUE=DATE:20260510
-SUMMARY:UFC 328: Chimaev vs. Strickland
-LOCATION:Newark, NJ
-END:VEVENT
-BEGIN:VEVENT
-UID:43fb94ba80d065d7edb8a3fe171646c7@ufc-calendar
-DTSTART;VALUE=DATE:20260424
-DTEND;VALUE=DATE:20260425
-SUMMARY:Countdown: UFC 328: Chimaev vs. Strickland
-END:VEVENT
-BEGIN:VEVENT
-UID:5096cf3adeeef5e913207a5cd46617df@ufc-calendar
-DTSTART;VALUE=DATE:20260516
-DTEND;VALUE=DATE:20260517
-SUMMARY:UFC Fight Night: Allen vs. Costa
-LOCATION:Las Vegas, NV
-END:VEVENT
-BEGIN:VEVENT
-UID:7dca90e65fdce3f87ecc61e1aadcee57@ufc-calendar
-DTSTART;VALUE=DATE:20260530
-DTEND;VALUE=DATE:20260531
-SUMMARY:UFC Fight Night: Yadong vs. Figueiredo
-LOCATION:Macau, China
-END:VEVENT
-BEGIN:VEVENT
-UID:47c0fd596f04ca2a1f36d8fed5eaaa43@ufc-calendar
-DTSTART;VALUE=DATE:20260606
-DTEND;VALUE=DATE:20260607
-SUMMARY:UFC Fight Night: Muhammad vs. Bonfim
-LOCATION:Las Vegas, NV
-END:VEVENT
-BEGIN:VEVENT
-UID:07c98758a71614d8313dc2b5064bffd5@ufc-calendar
-DTSTART;VALUE=DATE:20260614
-DTEND;VALUE=DATE:20260615
-SUMMARY:UFC at the White House: Topuria vs. Gaethje
-LOCATION:Washington, D.C.
-END:VEVENT
-BEGIN:VEVENT
-UID:7a7ea7ffce9a8f81e19bc17b38574412@ufc-calendar
+UID:ufc-countdown-600058854@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20260529
 DTEND;VALUE=DATE:20260530
-SUMMARY:Countdown: UFC at the White House: Topuria vs. Gaethje
+SUMMARY:Countdown: UFC Freedom 250
+DESCRIPTION:UFC Freedom 250: Topuria vs Gaethje\nType: Special\nVenue: Sout
+ h Lawn of the White House\, Washington\, DC\nhttps://www.espn.com/mma/figh
+ tcenter/_/id/600058854
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600058947@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260424
+DTEND;VALUE=DATE:20260425
+SUMMARY:Countdown: UFC 328
+DESCRIPTION:UFC 328: Chimaev vs Strickland\nType: Numbered event\nFirst bou
+ t: 21:00 UTC (4h00m before main card)\nVenue: Prudential Center\, Newark\,
+  NJ\nhttps://www.espn.com/mma/fightcenter/_/id/600058947
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600059148@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260626
+DTEND;VALUE=DATE:20260627
+SUMMARY:Countdown: UFC 329
+DESCRIPTION:UFC 329: McGregor vs Holloway 2\nType: Numbered event\nFirst bo
+ ut: 21:00 UTC (4h00m before main card)\nVenue: T-Mobile Arena\, Las Vegas\
+ , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600059148
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600059185@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:Countdown: UFC 330
+DESCRIPTION:UFC 330: Makhachev vs Machado Garry\nType: Numbered event\nFirs
+ t bout: 21:30 UTC (3h30m before main card)\nVenue: Xfinity Mobile Arena\, 
+ Philadelphia\, PA\nhttps://www.espn.com/mma/fightcenter/_/id/600059185
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600060772@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY:Countdown: Noche UFC
+DESCRIPTION:Noche UFC: Rodriguez vs Silva\nParamount Fight Night 23\nFirst 
+ bout: 18:00 UTC (3h00m before main card)\nVenue: Desert Diamond Arena\, Gl
+ endale\, AZ\nhttps://www.espn.com/mma/fightcenter/_/id/600060772
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600060963@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20260905
+SUMMARY:Countdown: UFC 331
+DESCRIPTION:UFC 331: Van vs Pantoja 2\nType: Numbered event\nFirst bout: 21
+ :00 UTC (4h00m before main card)\nVenue: crypto.com Arena\, Los Angeles\, 
+ CA\nhttps://www.espn.com/mma/fightcenter/_/id/600060963
 END:VEVENT
 END:VCALENDAR
