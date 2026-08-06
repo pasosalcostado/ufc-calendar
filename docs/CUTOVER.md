@@ -1,149 +1,92 @@
-# Cutover — manual steps for Roger
+# Cutover — completed 2026-08-06
 
-Do these in order. Every step is reversible.
+The migration is done. This file is now the record of what changed and the
+reference for maintaining it. It is no longer a procedure to follow.
 
-## 1. Stop the old sync (ends the daily Calendar pop-up) — ALREADY DONE
+## What happened
 
-This step is complete. On 2026-08-06 the old LaunchAgent was unloaded and
-persistently disabled (not just unloaded — `launchctl unload` alone would let
-macOS reload it on the next login):
+1. **Old sync stopped.** The LaunchAgent `com.rogervaldivieso.ufcsync` was
+   unloaded and **persistently disabled** — plain `launchctl unload` alone
+   would let macOS reload it at the next login:
 
-    launchctl unload ~/Library/LaunchAgents/com.rogervaldivieso.ufcsync.plist
-    launchctl disable gui/$(id -u)/com.rogervaldivieso.ufcsync
+       launchctl unload ~/Library/LaunchAgents/com.rogervaldivieso.ufcsync.plist
+       launchctl disable gui/$(id -u)/com.rogervaldivieso.ufcsync
 
-Verified: the job is absent from `launchctl list` and shows up disabled in
-`launchctl print-disabled gui/$(id -u)`. The plist itself was left on disk at
-`~/Library/LaunchAgents/com.rogervaldivieso.ufcsync.plist` — nothing was
-deleted or moved — specifically so this stays reversible.
+   The plist was deliberately left on disk so this stays reversible. That ended
+   the daily 3 AM Calendar pop-up.
 
-To undo:
+2. **Subscribed to the feed**, Location **iCloud**, refresh hourly. It
+   populated on both Mac and iPhone.
 
-    launchctl enable gui/$(id -u)/com.rogervaldivieso.ufcsync
-    launchctl load ~/Library/LaunchAgents/com.rogervaldivieso.ufcsync.plist
+3. **Deleted the stale 2026 entries** from the old calendar.
 
-Still outstanding, optional, not required for cutover: archiving
-`~/Scripts/ufc_calendar/` to `~/Documents/App Backups/` so the old script is
-out of the way. Nothing depends on doing this — it is just tidying up. If you
-want it done:
+Optional, still outstanding, nothing depends on it — archiving the old script:
 
     mv ~/Scripts/ufc_calendar ~/Documents/App\ Backups/ufc_calendar-retired-2026-08-06
 
-## You will end up with TWO calendars, on purpose
+## The two calendars, and why both stay
 
-The feed cannot be merged into your existing calendar — a subscription is
-always its own calendar. So after cutover:
+A subscription is always its own calendar; a feed cannot be merged into an
+existing one. So these coexist permanently:
 
-| | **UFC Events** (existing) | **UFC Cards** (the feed) |
+| | **UFC Events** (yours) | **UFC Cards** (the feed) |
 |---|---|---|
 | Type | iCloud, editable | Subscribed, read-only |
-| Contents | your 2021-2025 history, 106 events | full 2026 season + all future |
-| Updates | never again, nothing writes to it | daily, automatically |
+| Contents | 2021-2025 history + anything the feed can't carry | full current season + future |
+| Updates | never — nothing writes to it | daily, automatically |
 | You can edit | yes | no |
 
-They coexist permanently, because those 106 older events are history the ESPN
-feed does not cover. The feed deliberately calls itself **UFC Cards** rather
-than "UFC Events" so the two are never ambiguous in the sidebar. You can rename
-a subscribed calendar locally in Calendar.app if you prefer something else.
+The feed announces itself as **UFC Cards** specifically so it is never confused
+with your own calendar in the sidebar. You can rename a subscribed calendar
+locally in Calendar.app if you prefer.
 
-## 2. Clear 2026 out of the existing UFC Events calendar
+## ⚠️ Never bulk-delete from the old calendar
 
-Roger's choice: **keep the "UFC Events" calendar as it is** and delete its 2026
-events by hand (about 5 minutes) rather than renaming and hiding it.
+**Delete an old entry only when the feed has a counterpart.** The original
+instruction here said "delete all 39 2026 events" and that was wrong — two of
+them were grappling cards with no replacement anywhere, so following it
+literally would have destroyed the only record of them.
 
-The new feed carries the **full 2026 season**, past events included, so anything
-from 2026 left in the old calendar will show twice. Delete 2026 only.
+Deliberately kept in **UFC Events**:
 
-Measured on 2026-08-06, the calendar holds **145 events**:
+- `UFC BJJ 5: Musumeci vs. Montague` — 12 Feb 2026
+- `UFC BJJ 6: Fowler vs. Machado` — 12 Mar 2026
 
-    2021   13
-    2022    5
-    2023   18
-    2024   15
-    2025   55
-    2026   39   <- delete these
+Safe to delete whenever (the feed carries both):
 
-So: **39 to delete, 106 to keep.** Those 106 are history the ESPN feed does not
-cover, which is exactly why the calendar is kept rather than replaced.
+- `UFC: UFC Freedom 250` — 14 Jun 2026 → feed has `UFC Freedom 250: Topuria vs Gaethje`
+- `UFC Fight Night: Buckley vs Malott` — 17 Oct 2026 → feed has `PFN 24: Buckley vs Malott`
 
-In Calendar.app: search the **UFC Events** calendar for 2026 entries and delete
-them. Nothing will re-add them — the old sync was disabled in step 1.
+## Grappling / BJJ — the one manual gap
 
-### Do NOT delete grappling entries
+ESPN does not track grappling at all: none of its 48 MMA leagues cover it.
+ufc.com *does* list UFC BJJ cards when they are scheduled — there simply are
+none upcoming right now — but scraping ufc.com is what this project replaced,
+and its filter for grappling never worked anyway.
 
-**Delete a 2026 entry only if the feed has a counterpart.** The feed carries no
-grappling, so anything named `UFC BJJ ...` has no replacement and deleting it
-loses that record permanently.
+So expect roughly **2-4 UFC BJJ cards a year to add by hand**, into
+**UFC Events**, not the feed. A known, bounded gap rather than an unknown.
 
-As of 2026-08-06 the old calendar held two: `UFC BJJ 5: Musumeci vs. Montague`
-(12 Feb) and `UFC BJJ 6: Fowler vs. Machado` (12 Mar). Keep them, and keep any
-future ones you add by hand. ESPN does not track grappling at all; ufc.com does
-list UFC BJJ cards when they are scheduled, so expect roughly 2-4 a year to
-add yourself.
-
-### Do step 3 BEFORE this step
-
-**Subscribe first, delete second.** Written the other way round originally, on
-the assumption the feed would already be live. It is not yet — GitHub Actions
-and Pages were in a major outage on 2026-08-06, so the published URL still
-serves the stale March file until the first workflow run succeeds.
-
-Deleting first would leave you with **no UFC events at all** in the gap, which
-matters when the next card is days away.
-
-Subscribing first is also safer, not just more convenient: **a subscribed
-calendar is read-only.** Calendar.app will not let you delete anything inside
-it, so once both are visible the only entries you *can* delete are the old
-ones. You cannot remove the wrong ones by mistake. They also appear under a
-different calendar name and colour.
-
-The brief overlap where each 2026 card appears twice is harmless, and it lets
-you compare the new entries against the old before discarding anything.
-
-Undo: none needed — every 2026 event deleted here already exists in the feed,
-sourced from ESPN and correctly named.
-
-## 3. Subscribe to the new feed — do this BEFORE step 2
-
-**First, check the feed is actually live.** Until the first workflow run
-succeeds, the URL still serves the stale March file. It is ready when it is
-roughly 20 KB rather than 3 KB:
+## Checking the feed is healthy
 
     curl -sL -o /dev/null -w "%{size_download} bytes\n" \
       https://pasosalcostado.github.io/ufc-calendar/UFC_Events.ics
 
-Around 20169 means the new feed. Around 3155 means the old one — wait.
+Roughly 20 KB is the live feed. Roughly 3 KB means it has reverted to the
+abandoned March 2026 file, which would mean something is badly wrong.
 
-Calendar.app → File → New Calendar Subscription:
-
-    https://pasosalcostado.github.io/ufc-calendar/UFC_Events.ics
-
-- **Location: iCloud** — this is what gets the calendar onto the iPhone too.
-- **Auto-refresh: Every hour**
-- Leave alerts enabled if you want Countdown notifications
-
-You can do this at iCloud.com instead if you would rather not open Calendar.app.
-
-Once subscribed, **Calendar.app never needs to be open** for the feed to stay
-current. Refreshing an iCloud-hosted subscription is handled by macOS's
-`CalendarAgent` in the background and, because the subscription lives in
-iCloud, by Apple's own servers pushing updates to every device signed into
-the account — not by the Calendar app itself. That is what ends the daily
-Calendar pop-up, which was one of the two original complaints.
-
-## 4. Check it
-
-- August shows four UFC cards plus three DWCS Tuesdays
-- UFC 330 sits on **Sat 15 Aug**, not Aug 16
-- Fight Nights read `PFN 19`, `PFN 20`, …
-- Open one event: the notes show the first-bout time, venue and ESPN link
-
-Not covered by this feed: grappling and BJJ events. No free structured source
-exists for those, so they are out of scope by design and stay on your radar
-by hand, same as before.
+The rebuild runs daily at 09:00 UTC via GitHub Actions. **If a build fails,
+GitHub emails you** — that email is the alarm, and it is deliberate: a failed
+build publishes nothing and the previous feed keeps serving, so a failure is
+visible rather than silent.
 
 ## Rollback
 
-Unsubscribe from the feed and reload the old LaunchAgent (`launchctl enable`
-then `launchctl load`, both shown in step 1). The old script will repopulate
-"UFC Events" on its next 3 AM run — with its original bugs, but it is a
+Unsubscribe from **UFC Cards**, then:
+
+    launchctl enable gui/$(id -u)/com.rogervaldivieso.ufcsync
+    launchctl load ~/Library/LaunchAgents/com.rogervaldivieso.ufcsync.plist
+
+The old script repopulates "UFC Events" on its next 3 AM run — with all its
+original bugs (no August, no DWCS, mislabelled cards, duplicates), but it is a
 working rollback.
