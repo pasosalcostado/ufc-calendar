@@ -43,7 +43,10 @@ def assign(ledger: dict[str, int], events: list[Event]) -> dict[str, int]:
     updated = dict(ledger)
     next_number = max(updated.values(), default=0) + 1
 
-    for event in sorted(events, key=lambda e: e.main_card):
+    # Tiebreak on espn_id: two events sharing an identical main_card must still
+    # sort deterministically, or the same input could yield different numbers
+    # on different runs. These numbers go on invoices.
+    for event in sorted(events, key=lambda e: (e.main_card, e.espn_id)):
         if not classify(event.name).counts_for_pfn:
             continue
         if event.espn_id in updated:
