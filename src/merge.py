@@ -38,6 +38,31 @@ def split_vevents(data: bytes) -> dict[str, str]:
         if uid in blocks:
             raise ValueError(f"Duplicate UID in calendar data: {uid!r}")
         blocks[uid] = raw
+
+    # Parse-completeness guard. This is NOT the duplicate-UID count check
+    # once planned for build.py (that one compared parsed-block count against
+    # BEGIN:VEVENT count to catch duplicates, and became unreachable -- and
+    # was removed -- once the loop above started raising on duplicates
+    # directly). This guard catches a different failure: the block regex
+    # above requires a literal "BEGIN:VEVENT\r\n" and silently matches
+    # nothing for a block it can't find the end of. That happens if the
+    # input has lost its CRLF line endings (a hand edit, a merge-conflict
+    # resolution, .gitattributes being dropped) or a block is truncated
+    # before its END:VEVENT -- in both cases re.findall above simply returns
+    # fewer blocks than the file actually contains, with no error. The
+    # caller (merge_past) would then have no way to know an "existing" file
+    # was only partially read, and every event in the unmatched blocks would
+    # look deleted and vanish on the next merge -- exactly the silent
+    # data-loss failure mode this module exists to prevent.
+    begin_count = text.count("BEGIN:VEVENT")
+    if len(blocks) != begin_count:
+        raise ValueError(
+            f"Parsed {len(blocks)} VEVENT block(s) but found {begin_count} "
+            "'BEGIN:VEVENT' occurrence(s) in the input. The input is likely "
+            "not CRLF-encoded, or a VEVENT block is truncated (missing its "
+            "END:VEVENT)."
+        )
+
     return blocks
 
 

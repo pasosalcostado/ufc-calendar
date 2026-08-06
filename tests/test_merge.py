@@ -93,3 +93,41 @@ def test_split_raises_on_duplicate_uid():
                      timed("dup", datetime(2026, 2, 1, tzinfo=timezone.utc))])
     with pytest.raises(ValueError, match="dup"):
         split_vevents(data)
+
+
+def test_split_raises_on_lf_only_input_naming_both_counts():
+    # If the published file ever loses its CRLF (a hand edit, a merge-conflict
+    # resolution, .gitattributes being dropped), the block regex requires a
+    # literal "BEGIN:VEVENT\r\n" and silently matches nothing. Without this
+    # guard, split_vevents would return {} for a file that actually has
+    # several VEVENTs -- and merge_past would then treat every one of them as
+    # deleted.
+    data = calendar([timed("a", datetime(2026, 1, 1, tzinfo=timezone.utc)),
+                     timed("b", datetime(2026, 2, 1, tzinfo=timezone.utc)),
+                     timed("c", datetime(2026, 3, 1, tzinfo=timezone.utc))])
+    lf_only = data.replace(b"\r\n", b"\n")
+    with pytest.raises(ValueError) as exc_info:
+        split_vevents(lf_only)
+    message = str(exc_info.value)
+    assert "Parsed 0" in message
+    assert "found 3" in message
+
+
+def test_split_raises_on_truncated_input_missing_end_vevent():
+    data = calendar([timed("a", datetime(2026, 1, 1, tzinfo=timezone.utc)),
+                     timed("b", datetime(2026, 2, 1, tzinfo=timezone.utc))])
+    text = data.decode("utf-8")
+    # Chop off the final END:VEVENT (and everything after) so the second
+    # block's BEGIN:VEVENT has no matching END:VEVENT -- simulates a
+    # truncated file.
+    truncated = text[:text.rindex("END:VEVENT")]
+    with pytest.raises(ValueError):
+        split_vevents(truncated.encode("utf-8"))
+
+
+def test_split_still_parses_well_formed_crlf_input_with_several_events():
+    # The completeness guard must not over-fire on ordinary well-formed input.
+    data = calendar([timed("a", datetime(2026, 1, 1, tzinfo=timezone.utc)),
+                     timed("b", datetime(2026, 2, 1, tzinfo=timezone.utc)),
+                     timed("c", datetime(2026, 3, 1, tzinfo=timezone.utc))])
+    assert set(split_vevents(data)) == {"a", "b", "c"}

@@ -63,5 +63,8 @@ def assert_anchor(ledger: dict[str, int]) -> None:
         raise AnchorMismatch(
             f"PFN anchor drift: event {ANCHOR_ID} should be PFN {ANCHOR_PFN}, got {actual!r}. "
             "Publishing nothing — a wrong number on an invoice is worse than no number. "
-            "If the schedule genuinely changed, rerun with --renumber."
+            "--renumber only helps while the anchor event is still in the fetched season; "
+            "once it drops out of ESPN's payload, a rebuilt ledger can never contain it and "
+            "this check will fail again. If that has happened, re-pin ANCHOR_ID/ANCHOR_PFN in "
+            "src/pfn.py to a more recent known-good event instead."
         )
