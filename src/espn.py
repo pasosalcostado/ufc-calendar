@@ -83,9 +83,11 @@ def parse_events(payload: dict) -> list[Event]:
     for item in raw:
         name = item.get("name")
         espn_id = item.get("id")
-        if not name or not espn_id:
+        if name is None or espn_id is None:
             raise EspnDataError(f"event missing id or name: {item!r:.200}")
 
+        # Lexical sort is correct here only because ESPN's ISO-8601 'Z' timestamps
+        # are fixed-width (e.g. "2026-01-25T02:00Z") — no zero-padding gaps to trip on.
         times = sorted({c["date"] for c in item.get("competitions", []) if c.get("date")})
         if not times:
             raise EspnDataError(f"event {name!r} has no bout times")

@@ -1,12 +1,31 @@
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.error import URLError
 
 import pytest
 
+from src import espn
 from src.espn import EspnDataError, _build_request, parse_events
 
 FIXTURE = Path(__file__).parent / "fixtures" / "espn_2026.json"
+
+
+class _FakeResponse:
+    """Stands in for the object urlopen() returns, as a context manager."""
+
+    def __init__(self, status=200, body=b"{}"):
+        self.status = status
+        self._body = body
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc_info):
+        return False
+
+    def read(self):
+        return self._body
 
 
 def load():
@@ -66,3 +85,93 @@ def test_request_carries_no_user_agent():
     # breaking the daily build. Verified against the live endpoint 2026-08-06.
     req = _build_request("https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates=2026")
     assert req.get_header("User-agent") is None
+
+
+# --- fetch_season failure paths -------------------------------------------
+# urlopen and time.sleep are monkeypatched throughout: no network calls, no
+# real sleeping, so the suite stays fast and deterministic.
+
+
+def test_fetch_season_retries_transient_failure_then_succeeds(monkeypatch):
+    calls = []
+    sleeps = []
+    payload = {"events": [{"id": "1"}]}
+
+    def fake_urlopen(req, timeout=None):
+        calls.append(req)
+        if len(calls) == 1:
+            raise URLError("temporary DNS failure")
+        return _FakeResponse(status=200, body=json.dumps(payload).encode())
+
+    monkeypatch.setattr(espn, "urlopen", fake_urlopen)
+    monkeypatch.setattr(espn.time, "sleep", lambda seconds: sleeps.append(seconds))
+
+    result = espn.fetch_season(2026)
+
+    assert result == payload
+    assert len(calls) == 2
+
+
+def test_fetch_season_raises_after_retries_exhausted(monkeypatch):
+    calls = []
+
+    def fake_urlopen(req, timeout=None):
+        calls.append(req)
+        raise URLError("still down")
+
+    monkeypatch.setattr(espn, "urlopen", fake_urlopen)
+    monkeypatch.setattr(espn.time, "sleep", lambda seconds: None)
+
+    with pytest.raises(EspnDataError, match="unreachable after 3 attempts"):
+        espn.fetch_season(2026)
+
+    assert len(calls) == 3
+
+
+def test_fetch_season_backoff_escalates_and_skips_final_sleep(monkeypatch):
+    sleeps = []
+
+    def fake_urlopen(req, timeout=None):
+        raise URLError("still down")
+
+    monkeypatch.setattr(espn, "urlopen", fake_urlopen)
+    monkeypatch.setattr(espn.time, "sleep", lambda seconds: sleeps.append(seconds))
+
+    with pytest.raises(EspnDataError):
+        espn.fetch_season(2026)
+
+    # 3 retries -> 3 attempts (0, 1, 2), sleeps only between attempts: after 0 and
+    # after 1, escalating 2**attempt. No sleep after the final (3rd) attempt.
+    assert sleeps == [1, 2]
+
+
+def test_fetch_season_raises_on_non_200_status(monkeypatch):
+    calls = []
+
+    def fake_urlopen(req, timeout=None):
+        calls.append(req)
+        return _FakeResponse(status=500, body=b"{}")
+
+    monkeypatch.setattr(espn, "urlopen", fake_urlopen)
+    monkeypatch.setattr(espn.time, "sleep", lambda seconds: None)
+
+    with pytest.raises(EspnDataError, match="unreachable after 3 attempts"):
+        espn.fetch_season(2026)
+
+    # A non-200 status currently goes through the same retry loop as a
+    # transient network error — it is not treated as immediately fatal.
+    assert len(calls) == 3
+
+
+def test_fetch_season_raises_on_malformed_json(monkeypatch):
+    def fake_urlopen(req, timeout=None):
+        return _FakeResponse(status=200, body=b"not valid json{")
+
+    monkeypatch.setattr(espn, "urlopen", fake_urlopen)
+    monkeypatch.setattr(espn.time, "sleep", lambda seconds: None)
+
+    # json.load raises json.JSONDecodeError, a ValueError subclass, which the
+    # retry loop already catches and wraps — this asserts that wrapping holds,
+    # not a bare ValueError escaping to the caller.
+    with pytest.raises(EspnDataError, match="unreachable after 3 attempts"):
+        espn.fetch_season(2026)
