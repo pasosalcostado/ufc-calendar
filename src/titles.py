@@ -41,7 +41,7 @@ def summary(event: Event, cls: Classification, pfn: int | None) -> str:
             raise TitleError(f"cannot read season/week from {event.name!r}")
         return f"DWCS S{int(match.group(1))} W{int(match.group(2))}"
 
-    # PPV and SPECIAL keep ESPN's naming, normalized.
+    # Numbered events and specials keep ESPN's naming, normalized.
     return normalize_vs(event.name)
 
 
@@ -53,7 +53,7 @@ def _lead_time(event: Event) -> str:
 
 
 def description(event: Event, cls: Classification, pfn: int | None) -> str:
-    lines = [event.name]
+    lines = [normalize_vs(event.name)]
 
     if cls.type is EventType.PFN or cls.counts_for_pfn:
         if pfn is None:
@@ -62,10 +62,13 @@ def description(event: Event, cls: Classification, pfn: int | None) -> str:
     else:
         lines.append(f"Type: {cls.type.value}")
 
-    # UTC and a relative offset — never a frozen local time.
-    lines.append(
-        f"First bout: {event.first_bout:%H:%M} UTC ({_lead_time(event)} before main card)"
-    )
+    # UTC and a relative offset — never a frozen local time. Omitted when the
+    # gap is zero: DWCS has a single bout segment, so first_bout == main_card
+    # and "0h00m before main card" would carry no information.
+    if event.first_bout != event.main_card:
+        lines.append(
+            f"First bout: {event.first_bout:%H:%M} UTC ({_lead_time(event)} before main card)"
+        )
 
     venue = ", ".join(p for p in (event.venue_full, event.venue) if p)
     if venue:

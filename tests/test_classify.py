@@ -11,7 +11,7 @@ FIXTURE = Path(__file__).parent / "fixtures" / "espn_2026.json"
 
 def test_numbered_ppv():
     c = classify("UFC 330: Makhachev vs. Machado Garry")
-    assert c.type is EventType.PPV
+    assert c.type is EventType.NUMBERED
     assert c.counts_for_pfn is False
     assert c.countdown_eligible is True
 
@@ -43,7 +43,7 @@ def test_noche_in_ppv_form_is_a_ppv():
     # 2024: Noche UFC was UFC 306, the Sphere show. Rule order must catch the
     # UFC number before the "noche" test is ever reached.
     c = classify("UFC 306 - Riyadh Season Noche UFC: O'Malley vs. Dvalishvili")
-    assert c.type is EventType.PPV
+    assert c.type is EventType.NUMBERED
     assert c.counts_for_pfn is False
 
 

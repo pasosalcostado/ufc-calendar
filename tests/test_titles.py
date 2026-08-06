@@ -58,12 +58,21 @@ def test_malformed_dwcs_label_raises():
 def test_description_contains_everything_the_short_title_dropped():
     name = "UFC Fight Night: Gamrot vs Salkilld"
     text = description(make(name), classify(name), 19)
-    assert "UFC Fight Night: Gamrot vs Salkilld" in text      # verbatim ESPN label
+    assert "UFC Fight Night: Gamrot vs Salkilld" in text      # normalized ESPN label
     assert "Paramount Fight Night 19" in text                  # invoice-ready wording
     assert "First bout" in text
     assert "Wells Fargo Center" in text
     assert "Philadelphia, PA" in text
     assert "https://www.espn.com/mma/fightcenter/_/id/600060633" in text
+
+
+def test_description_normalizes_vs_in_the_label_line():
+    # description() must normalize 'vs.' too, not just summary() — the notes
+    # should never carry ESPN's inconsistent punctuation either.
+    name = "UFC 330: Makhachev vs. Machado Garry"
+    text = description(make(name), classify(name), None)
+    assert "Makhachev vs Machado Garry" in text
+    assert "vs." not in text
 
 
 def test_description_states_first_bout_in_utc_and_relatively():
@@ -89,10 +98,33 @@ def test_description_noche_without_a_number_raises():
 def test_description_ppv_without_a_number_still_renders():
     name = "UFC 330: Makhachev vs. Machado Garry"
     text = description(make(name), classify(name), None)
-    assert "Type: PPV" in text
+    assert "Type: Numbered event" in text
 
 
 def test_description_dwcs_without_a_number_still_renders():
     name = "Dana White's Contender Series: Season 10, Week 3"
     text = description(make(name), classify(name), None)
     assert "Type: DWCS" in text
+
+
+def test_description_non_noche_special_without_a_number_still_renders():
+    # The third branch the missing-number fix depends on: counts_for_pfn is
+    # False here (unlike Noche), so this must render, not raise.
+    name = "UFC Freedom 250: Topuria vs. Gaethje"
+    text = description(make(name), classify(name), None)
+    assert "Type: Special" in text
+
+
+def test_description_omits_first_bout_line_when_gap_is_zero():
+    # DWCS has a single bout segment: first_bout == main_card. A "0h00m
+    # before main card" line would carry no information, so it's omitted.
+    name = "Dana White's Contender Series: Season 10, Week 3"
+    same_time = datetime(2026, 8, 16, 1, 0, tzinfo=timezone.utc)
+    text = description(make(name, main_card=same_time, first_bout=same_time), classify(name), None)
+    assert "First bout" not in text
+
+
+def test_description_includes_first_bout_line_when_gap_is_nonzero():
+    name = "UFC 330: Makhachev vs. Machado Garry"
+    text = description(make(name), classify(name), None)
+    assert "First bout" in text

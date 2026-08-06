@@ -12,10 +12,13 @@ from enum import Enum
 
 
 class EventType(str, Enum):
-    PPV = "PPV"
-    PFN = "PFN"
+    # Values are human-readable: they render directly in DESCRIPTION as
+    # "Type: <value>". US/LATAM UFC events are no longer pay-per-view, so
+    # this is "Numbered event", not "PPV".
+    NUMBERED = "Numbered event"
+    PFN = "Fight Night"
     DWCS = "DWCS"
-    SPECIAL = "SPECIAL"
+    SPECIAL = "Special"
 
 
 @dataclass(frozen=True)
@@ -39,9 +42,10 @@ def classify(name: str) -> Classification:
     lowered = name.lower()
 
     # Order matters. The numbered test must come first: in 2024 Noche UFC *was*
-    # UFC 306, and must classify as a PPV before the "noche" test is reached.
+    # UFC 306, and must classify as a numbered event before the "noche" test
+    # is reached.
     if _NUMBERED.search(name):
-        return Classification(EventType.PPV, counts_for_pfn=False, countdown_eligible=True)
+        return Classification(EventType.NUMBERED, counts_for_pfn=False, countdown_eligible=True)
 
     if "contender series" in lowered:
         return Classification(EventType.DWCS, counts_for_pfn=False, countdown_eligible=False)
