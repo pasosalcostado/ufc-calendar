@@ -28,6 +28,23 @@ want it done:
 
     mv ~/Scripts/ufc_calendar ~/Documents/App\ Backups/ufc_calendar-retired-2026-08-06
 
+## You will end up with TWO calendars, on purpose
+
+The feed cannot be merged into your existing calendar — a subscription is
+always its own calendar. So after cutover:
+
+| | **UFC Events** (existing) | **UFC Cards** (the feed) |
+|---|---|---|
+| Type | iCloud, editable | Subscribed, read-only |
+| Contents | your 2021-2025 history, 106 events | full 2026 season + all future |
+| Updates | never again, nothing writes to it | daily, automatically |
+| You can edit | yes | no |
+
+They coexist permanently, because those 106 older events are history the ESPN
+feed does not cover. The feed deliberately calls itself **UFC Cards** rather
+than "UFC Events" so the two are never ambiguous in the sidebar. You can rename
+a subscribed calendar locally in Calendar.app if you prefer something else.
+
 ## 2. Clear 2026 out of the existing UFC Events calendar
 
 Roger's choice: **keep the "UFC Events" calendar as it is** and delete its 2026

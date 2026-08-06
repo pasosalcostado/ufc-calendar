@@ -81,7 +81,11 @@ def calendar(vevents: list[str]) -> bytes:
         f"PRODID:{PRODID}",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        "X-WR-CALNAME:UFC Events",
+        # Deliberately NOT "UFC Events" -- that is the name of Roger's existing
+        # editable iCloud calendar, which keeps his 2021-2025 history. The two
+        # coexist permanently, so identical names would make the sidebar
+        # ambiguous exactly when he needs to tell them apart.
+        "X-WR-CALNAME:UFC Cards",
         *vevents,
         "END:VCALENDAR",
     ]
