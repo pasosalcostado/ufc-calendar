@@ -49,12 +49,40 @@ So: **39 to delete, 106 to keep.** Those 106 are history the ESPN feed does not
 cover, which is exactly why the calendar is kept rather than replaced.
 
 In Calendar.app: search the **UFC Events** calendar for 2026 entries and delete
-them. Do this **after** step 1, so the old sync cannot re-add them overnight.
+them. Nothing will re-add them — the old sync was disabled in step 1.
 
-Undo: none needed — every 2026 event deleted here reappears from the feed in
-step 3, sourced from ESPN and correctly named.
+### Do step 3 BEFORE this step
 
-## 3. Subscribe to the new feed
+**Subscribe first, delete second.** Written the other way round originally, on
+the assumption the feed would already be live. It is not yet — GitHub Actions
+and Pages were in a major outage on 2026-08-06, so the published URL still
+serves the stale March file until the first workflow run succeeds.
+
+Deleting first would leave you with **no UFC events at all** in the gap, which
+matters when the next card is days away.
+
+Subscribing first is also safer, not just more convenient: **a subscribed
+calendar is read-only.** Calendar.app will not let you delete anything inside
+it, so once both are visible the only entries you *can* delete are the old
+ones. You cannot remove the wrong ones by mistake. They also appear under a
+different calendar name and colour.
+
+The brief overlap where each 2026 card appears twice is harmless, and it lets
+you compare the new entries against the old before discarding anything.
+
+Undo: none needed — every 2026 event deleted here already exists in the feed,
+sourced from ESPN and correctly named.
+
+## 3. Subscribe to the new feed — do this BEFORE step 2
+
+**First, check the feed is actually live.** Until the first workflow run
+succeeds, the URL still serves the stale March file. It is ready when it is
+roughly 20 KB rather than 3 KB:
+
+    curl -sL -o /dev/null -w "%{size_download} bytes\n" \
+      https://pasosalcostado.github.io/ufc-calendar/UFC_Events.ics
+
+Around 20169 means the new feed. Around 3155 means the old one — wait.
 
 Calendar.app → File → New Calendar Subscription:
 
