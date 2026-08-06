@@ -422,10 +422,10 @@ The old script's defining flaw was reporting success while dropping input. Rules
 
 1. `launchctl unload` and remove `~/Library/LaunchAgents/com.rogervaldivieso.ufcsync.plist`.
 2. Archive `~/Scripts/ufc_calendar/ufc_sync.py`.
-3. Rename the existing "UFC Events" iCloud calendar to `UFC Events (archive)` and **untick it**
-   in the sidebar. Do not delete it, and do not delete events from it — the new feed carries the
-   full 2026 season (§6), so leaving the old one visible would double every entry. Unticking
-   hides it while preserving the history and keeping rollback trivial.
+3. **Keep the existing "UFC Events" iCloud calendar** and delete its **2026** events by hand
+   (Roger's call, ~5 minutes). The feed carries the full 2026 season (§6), so any 2026 entry left
+   behind would appear twice. Delete 2026 only — earlier years are outside the feed's coverage
+   and should stay. Do this after step 1 so the old sync cannot re-add them overnight.
 4. Subscribe to the feed — Location **iCloud**, refresh **hourly** — so it reaches the iPhone.
    This can be done at iCloud.com or on the iPhone, so Calendar.app on the Mac never has to be
    opened at all.

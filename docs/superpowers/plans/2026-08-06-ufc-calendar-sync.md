@@ -1801,14 +1801,31 @@ Do these once, in order. Every step is reversible.
 
 To undo: move both back and `launchctl load` the plist.
 
-## 2. Archive the old calendar — do NOT delete it
+## 2. Clear 2026 out of the existing UFC Events calendar
 
-In Calendar.app: right-click **UFC Events** → Rename to **UFC Events (archive)**,
-then **untick** it in the sidebar.
+Roger's choice: **keep the "UFC Events" calendar as it is** and delete its 2026
+events by hand (about 5 minutes) rather than renaming and hiding it.
 
-Do not delete it and do not delete events from it. The new feed carries the full
-2026 season, so leaving the old calendar visible would show every event twice.
-Unticking hides it while keeping the history and keeping rollback trivial.
+The new feed carries the **full 2026 season**, past events included, so anything
+from 2026 left in the old calendar will show twice. Delete 2026 only.
+
+Measured on 2026-08-06, the calendar holds **145 events**:
+
+    2021   13
+    2022    5
+    2023   18
+    2024   15
+    2025   55
+    2026   39   <- delete these
+
+So: **39 to delete, 106 to keep.** Those 106 are history the ESPN feed does not
+cover, which is exactly why the calendar is kept rather than replaced.
+
+In Calendar.app: search the **UFC Events** calendar for 2026 entries and delete
+them. Do this **after** step 1, so the old sync cannot re-add them overnight.
+
+Undo: none needed — every 2026 event deleted here reappears from the feed in
+step 3, sourced from ESPN and correctly named.
 
 ## 3. Subscribe to the new feed
 
@@ -1831,8 +1848,9 @@ You can do this at iCloud.com instead if you would rather not open Calendar.app.
 
 ## Rollback
 
-Unsubscribe, re-tick **UFC Events (archive)**, and optionally reload the old
-LaunchAgent. Nothing has been deleted at any point.
+Unsubscribe from the feed and reload the old LaunchAgent (move the plist back
+and `launchctl load` it). The old script will repopulate "UFC Events" on its
+next 3 AM run — with its original bugs, but it is a working rollback.
 ```
 
 - [ ] **Step 5: Write the README**
