@@ -439,6 +439,16 @@ DESCRIPTION:UFC 331: Van vs Pantoja 2\nType: Numbered event\nFirst bout: 21
 LOCATION:Los Angeles\, CA
 END:VEVENT
 BEGIN:VEVENT
+UID:ufc-600061182@pasosalcostado.github.io
+DTSTART:20261004T010000Z
+DURATION:PT3H
+SUMMARY:UFC 332
+DESCRIPTION:UFC 332\nType: Numbered event\nFirst bout: 21:00 UTC (4h00m bef
+ ore main card)\nVenue: Delta Center\, Salt Lake City\, UT\nhttps://www.esp
+ n.com/mma/fightcenter/_/id/600061182
+LOCATION:Salt Lake City\, UT
+END:VEVENT
+BEGIN:VEVENT
 UID:ufc-countdown-600057024@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20260109
 DTEND;VALUE=DATE:20260110
@@ -527,5 +537,14 @@ SUMMARY:Countdown: UFC 331
 DESCRIPTION:UFC 331: Van vs Pantoja 2\nType: Numbered event\nFirst bout: 21
  :00 UTC (4h00m before main card)\nVenue: crypto.com Arena\, Los Angeles\, 
  CA\nhttps://www.espn.com/mma/fightcenter/_/id/600060963
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600061182@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+SUMMARY:Countdown: UFC 332
+DESCRIPTION:UFC 332\nType: Numbered event\nFirst bout: 21:00 UTC (4h00m bef
+ ore main card)\nVenue: Delta Center\, Salt Lake City\, UT\nhttps://www.esp
+ n.com/mma/fightcenter/_/id/600061182
 END:VEVENT
 END:VCALENDAR
