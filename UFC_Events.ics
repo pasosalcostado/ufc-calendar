@@ -449,6 +449,36 @@ DESCRIPTION:UFC 332\nType: Numbered event\nFirst bout: 21:00 UTC (4h00m bef
 LOCATION:Salt Lake City\, UT
 END:VEVENT
 BEGIN:VEVENT
+UID:ufc-600061266@pasosalcostado.github.io
+DTSTART:20260926T220000Z
+DURATION:PT3H
+SUMMARY:PFN 25: Rosas Jr. vs Barcelos
+DESCRIPTION:UFC Fight Night: Rosas Jr. vs Barcelos\nParamount Fight Night 2
+ 5\nFirst bout: 19:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las 
+ Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061266
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600061267@pasosalcostado.github.io
+DTSTART:20261024T180000Z
+DURATION:PT3H
+SUMMARY:UFC 333: Volkanovski vs Evloev
+DESCRIPTION:UFC 333: Volkanovski vs Evloev\nType: Numbered event\nFirst bou
+ t: 14:00 UTC (4h00m before main card)\nVenue: Etihad Arena\, Abu Dhabi\, U
+ nited Arab Emirates\nhttps://www.espn.com/mma/fightcenter/_/id/600061267
+LOCATION:Abu Dhabi\, United Arab Emirates
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600061268@pasosalcostado.github.io
+DTSTART:20261108T010000Z
+DURATION:PT3H
+SUMMARY:PFN 26: Bonfim vs Brady
+DESCRIPTION:UFC Fight Night: Bonfim vs Brady\nParamount Fight Night 26\nFir
+ st bout: 22:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas\
+ , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061268
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
 UID:ufc-countdown-600057024@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20260109
 DTEND;VALUE=DATE:20260110
@@ -546,5 +576,14 @@ SUMMARY:Countdown: UFC 332
 DESCRIPTION:UFC 332\nType: Numbered event\nFirst bout: 21:00 UTC (4h00m bef
  ore main card)\nVenue: Delta Center\, Salt Lake City\, UT\nhttps://www.esp
  n.com/mma/fightcenter/_/id/600061182
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600061267@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Countdown: UFC 333
+DESCRIPTION:UFC 333: Volkanovski vs Evloev\nType: Numbered event\nFirst bou
+ t: 14:00 UTC (4h00m before main card)\nVenue: Etihad Arena\, Abu Dhabi\, U
+ nited Arab Emirates\nhttps://www.espn.com/mma/fightcenter/_/id/600061267
 END:VEVENT
 END:VCALENDAR
