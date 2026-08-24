@@ -479,6 +479,26 @@ DESCRIPTION:UFC Fight Night: Bonfim vs Brady\nParamount Fight Night 26\nFir
 LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
+UID:ufc-600061400@pasosalcostado.github.io
+DTSTART:20261115T020000Z
+DURATION:PT3H
+SUMMARY:UFC 334
+DESCRIPTION:UFC 334\nType: Numbered event\nFirst bout: 22:00 UTC (4h00m bef
+ ore main card)\nVenue: Madison Square Garden\, New York\, NY\nhttps://www.
+ espn.com/mma/fightcenter/_/id/600061400
+LOCATION:New York\, NY
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600061401@pasosalcostado.github.io
+DTSTART:20261213T020000Z
+DURATION:PT3H
+SUMMARY:UFC 335
+DESCRIPTION:UFC 335\nType: Numbered event\nFirst bout: 22:00 UTC (4h00m bef
+ ore main card)\nVenue: T-Mobile Arena\, Las Vegas\, NV\nhttps://www.espn.c
+ om/mma/fightcenter/_/id/600061401
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
 UID:ufc-countdown-600057024@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20260109
 DTEND;VALUE=DATE:20260110
@@ -585,5 +605,23 @@ SUMMARY:Countdown: UFC 333
 DESCRIPTION:UFC 333: Volkanovski vs Evloev\nType: Numbered event\nFirst bou
  t: 14:00 UTC (4h00m before main card)\nVenue: Etihad Arena\, Abu Dhabi\, U
  nited Arab Emirates\nhttps://www.espn.com/mma/fightcenter/_/id/600061267
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600061400@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Countdown: UFC 334
+DESCRIPTION:UFC 334\nType: Numbered event\nFirst bout: 22:00 UTC (4h00m bef
+ ore main card)\nVenue: Madison Square Garden\, New York\, NY\nhttps://www.
+ espn.com/mma/fightcenter/_/id/600061400
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-countdown-600061401@pasosalcostado.github.io
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Countdown: UFC 335
+DESCRIPTION:UFC 335\nType: Numbered event\nFirst bout: 22:00 UTC (4h00m bef
+ ore main card)\nVenue: T-Mobile Arena\, Las Vegas\, NV\nhttps://www.espn.c
+ om/mma/fightcenter/_/id/600061401
 END:VEVENT
 END:VCALENDAR
