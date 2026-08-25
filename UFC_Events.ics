@@ -330,7 +330,7 @@ LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-600060734@pasosalcostado.github.io
-DTSTART:20260826T230000Z
+DTSTART:20260825T230000Z
 DURATION:PT3H
 SUMMARY:DWCS S10 W3
 DESCRIPTION:Dana White's Contender Series: Season 10\, Week 3\nType: DWCS\n
@@ -496,6 +496,16 @@ SUMMARY:UFC 335
 DESCRIPTION:UFC 335\nType: Numbered event\nFirst bout: 22:00 UTC (4h00m bef
  ore main card)\nVenue: T-Mobile Arena\, Las Vegas\, NV\nhttps://www.espn.c
  om/mma/fightcenter/_/id/600061401
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
+UID:ufc-600061420@pasosalcostado.github.io
+DTSTART:20261101T000000Z
+DURATION:PT3H
+SUMMARY:PFN 27: Las Vegas
+DESCRIPTION:UFC Fight Night: Las Vegas\nParamount Fight Night 27\nFirst bou
+ t: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas\, NV\n
+ https://www.espn.com/mma/fightcenter/_/id/600061420
 LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
