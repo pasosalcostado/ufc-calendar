@@ -412,10 +412,10 @@ BEGIN:VEVENT
 UID:ufc-600060772@pasosalcostado.github.io
 DTSTART:20260912T210000Z
 DURATION:PT3H
-SUMMARY:Noche UFC: Rodriguez vs Silva
-DESCRIPTION:Noche UFC: Rodriguez vs Silva\nParamount Fight Night 23\nFirst 
- bout: 18:00 UTC (3h00m before main card)\nVenue: Desert Diamond Arena\, Gl
- endale\, AZ\nhttps://www.espn.com/mma/fightcenter/_/id/600060772
+SUMMARY:Noche UFC: Silva vs Delgado
+DESCRIPTION:Noche UFC: Silva vs Delgado\nParamount Fight Night 23\nFirst bo
+ ut: 18:00 UTC (3h00m before main card)\nVenue: Desert Diamond Arena\, Glen
+ dale\, AZ\nhttps://www.espn.com/mma/fightcenter/_/id/600060772
 LOCATION:Glendale\, AZ
 END:VEVENT
 BEGIN:VEVENT
@@ -585,9 +585,9 @@ UID:ufc-countdown-600060772@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260829
 SUMMARY:Countdown: Noche UFC
-DESCRIPTION:Noche UFC: Rodriguez vs Silva\nParamount Fight Night 23\nFirst 
- bout: 18:00 UTC (3h00m before main card)\nVenue: Desert Diamond Arena\, Gl
- endale\, AZ\nhttps://www.espn.com/mma/fightcenter/_/id/600060772
+DESCRIPTION:Noche UFC: Silva vs Delgado\nParamount Fight Night 23\nFirst bo
+ ut: 18:00 UTC (3h00m before main card)\nVenue: Desert Diamond Arena\, Glen
+ dale\, AZ\nhttps://www.espn.com/mma/fightcenter/_/id/600060772
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-countdown-600060963@pasosalcostado.github.io
