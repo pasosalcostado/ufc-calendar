@@ -509,6 +509,16 @@ DESCRIPTION:UFC Fight Night: Las Vegas\nParamount Fight Night 27\nFirst bou
 LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
+UID:ufc-600061541@pasosalcostado.github.io
+DTSTART:20261011T000000Z
+DURATION:PT3H
+SUMMARY:PFN 28: Allen vs Duncan
+DESCRIPTION:UFC Fight Night: Allen vs Duncan\nParamount Fight Night 28\nFir
+ st bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas\
+ , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061541
+LOCATION:Las Vegas\, NV
+END:VEVENT
+BEGIN:VEVENT
 UID:ufc-countdown-600057024@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20260109
 DTEND;VALUE=DATE:20260110
