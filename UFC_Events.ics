@@ -440,21 +440,21 @@ LOCATION:Los Angeles\, CA
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-600061182@pasosalcostado.github.io
-DTSTART:20261004T010000Z
+DTSTART:20261004T000000Z
 DURATION:PT3H
 SUMMARY:UFC 332: Silva vs Wang
 DESCRIPTION:UFC 332: Silva vs Wang\nType: Numbered event\nFirst bout: 20:00
-  UTC (5h00m before main card)\nVenue: Delta Center\, Salt Lake City\, UT\n
+  UTC (4h00m before main card)\nVenue: Delta Center\, Salt Lake City\, UT\n
  https://www.espn.com/mma/fightcenter/_/id/600061182
 LOCATION:Salt Lake City\, UT
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-600061266@pasosalcostado.github.io
-DTSTART:20260926T220000Z
+DTSTART:20260927T000000Z
 DURATION:PT3H
 SUMMARY:PFN 25: Rosas Jr. vs Barcelos
 DESCRIPTION:UFC Fight Night: Rosas Jr. vs Barcelos\nParamount Fight Night 2
- 5\nFirst bout: 19:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las 
+ 5\nFirst bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las 
  Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061266
 LOCATION:Las Vegas\, NV
 END:VEVENT
@@ -614,7 +614,7 @@ DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
 SUMMARY:Countdown: UFC 332
 DESCRIPTION:UFC 332: Silva vs Wang\nType: Numbered event\nFirst bout: 20:00
-  UTC (5h00m before main card)\nVenue: Delta Center\, Salt Lake City\, UT\n
+  UTC (4h00m before main card)\nVenue: Delta Center\, Salt Lake City\, UT\n
  https://www.espn.com/mma/fightcenter/_/id/600061182
 END:VEVENT
 BEGIN:VEVENT
