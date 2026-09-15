@@ -502,10 +502,10 @@ BEGIN:VEVENT
 UID:ufc-600061420@pasosalcostado.github.io
 DTSTART:20261101T000000Z
 DURATION:PT3H
-SUMMARY:PFN 27: Las Vegas
-DESCRIPTION:UFC Fight Night: Las Vegas\nParamount Fight Night 27\nFirst bou
- t: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas\, NV\n
- https://www.espn.com/mma/fightcenter/_/id/600061420
+SUMMARY:PFN 27: Moicano vs Nolan
+DESCRIPTION:UFC Fight Night: Moicano vs Nolan\nParamount Fight Night 27\nFi
+ rst bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas
+ \, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061420
 LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
