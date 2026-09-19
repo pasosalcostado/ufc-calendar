@@ -7,6 +7,7 @@ measured as exactly events[].date + 3.0h across all 43 events of 2026 — and it
 endDate is a 07:59Z broadcast-day boundary, not a real end time.
 """
 import json
+import sys
 import time
 from datetime import datetime, timezone
 from urllib.error import URLError
@@ -74,7 +75,16 @@ def _venue(competitions: list[dict]) -> tuple[str, str]:
 
 
 def parse_events(payload: dict) -> list[Event]:
-    """Turn a raw ESPN payload into Events, sorted by main card time."""
+    """Turn a raw ESPN payload into Events, sorted by main card time.
+
+    An event announced before ESPN has scheduled its bouts (e.g. a newly
+    posted "UFC Fight Night: Qatar" with an empty competitions[].date) is
+    incomplete, not corrupt -- it reappears with real times once ESPN
+    fills them in on a later run. Skip it rather than failing the whole
+    payload; a single stub announcement should never take down every
+    other, fully-formed event. Structural corruption (an event missing
+    id/name entirely, or a payload with no events at all) still raises.
+    """
     raw = payload.get("events")
     if not raw:
         raise EspnDataError("ESPN payload contained no events")
@@ -90,7 +100,8 @@ def parse_events(payload: dict) -> list[Event]:
         # are fixed-width (e.g. "2026-01-25T02:00Z") — no zero-padding gaps to trip on.
         times = sorted({c["date"] for c in item.get("competitions", []) if c.get("date")})
         if not times:
-            raise EspnDataError(f"event {name!r} has no bout times")
+            print(f"skipping {name!r} (espn id {espn_id}): no bout times yet", file=sys.stderr)
+            continue
 
         venue, venue_full = _venue(item.get("competitions", []))
         events.append(Event(
@@ -101,5 +112,16 @@ def parse_events(payload: dict) -> list[Event]:
             venue=venue,
             venue_full=venue_full,
         ))
+
+    if not events:
+        # Every event in this payload was skipped for lacking bout times.
+        # Returning [] here would let build_calendar() sail through
+        # assign()/assert_anchor() (an already-populated ledger needs no new
+        # entries) and merge_past() (nothing fresh to seed, past entries
+        # carried forward as-is) -- and if the existing calendar alone had
+        # enough past events to clear validate()'s MINIMUM_EVENTS floor,
+        # every future event would be silently dropped from the published
+        # calendar. Zero usable events is the same failure as zero events.
+        raise EspnDataError("ESPN payload had events but none had usable bout times")
 
     return sorted(events, key=lambda e: e.main_card)

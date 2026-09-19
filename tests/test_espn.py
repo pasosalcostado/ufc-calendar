@@ -66,16 +66,57 @@ def test_venue_is_city_and_region():
     assert events["600057024"].venue == "Las Vegas, NV"
 
 
-def test_missing_competitions_raises():
-    payload = {"events": [{"id": "1", "name": "UFC 999: A vs B", "date": "2026-01-01T00:00Z",
-                           "competitions": []}]}
-    with pytest.raises(EspnDataError, match="no bout times"):
+def test_missing_bout_times_skips_only_that_event():
+    # A newly announced event (e.g. "UFC Fight Night: Qatar") can appear on
+    # the scoreboard before ESPN has scheduled its bouts. That is incomplete
+    # data, not corruption -- it should be skipped, not fail the whole feed.
+    payload = load()
+    payload["events"].append({
+        "id": "999999",
+        "name": "UFC Fight Night: Qatar",
+        "date": "2026-12-01T00:00Z",
+        "competitions": [{"date": None}],
+    })
+    events = parse_events(payload)
+    assert len(events) == 43
+    assert "999999" not in {e.espn_id for e in events}
+
+
+def test_missing_competitions_skips_only_that_event():
+    payload = {"events": [
+        {"id": "1", "name": "UFC 999: A vs B", "date": "2026-01-01T00:00Z", "competitions": []},
+        {"id": "2", "name": "UFC 998: C vs D", "date": "2026-01-01T00:00Z",
+         "competitions": [{"date": "2026-01-01T00:00Z"}]},
+    ]}
+    events = parse_events(payload)
+    assert [e.espn_id for e in events] == ["2"]
+
+
+def test_all_events_missing_bout_times_raises():
+    # No structural corruption here -- just nothing usable yet. But an empty
+    # events list is not automatically caught by downstream callers: with a
+    # populated ledger and an existing calendar that already clears
+    # validate()'s minimum on its own, zero fresh events can sail straight
+    # through to publish and silently drop every future event. So
+    # parse_events itself refuses when it has nothing usable at all, rather
+    # than leaving that guarantee to a caller that might not enforce it.
+    payload = {"events": [{"id": "1", "name": "UFC 999: A vs B", "competitions": []}]}
+    with pytest.raises(EspnDataError, match="none had usable bout times"):
         parse_events(payload)
 
 
 def test_empty_payload_raises():
     with pytest.raises(EspnDataError, match="no events"):
         parse_events({"events": []})
+
+
+def test_event_missing_id_or_name_still_raises():
+    # Distinguish "incomplete but legitimate" (skip) from actual structural
+    # corruption (fail loudly) -- a payload shaped unexpectedly by ESPN
+    # should never be silently swallowed.
+    payload = {"events": [{"name": "UFC 999: A vs B", "competitions": []}]}
+    with pytest.raises(EspnDataError, match="missing id or name"):
+        parse_events(payload)
 
 
 def test_request_carries_no_user_agent():
