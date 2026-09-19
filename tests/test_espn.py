@@ -92,12 +92,17 @@ def test_missing_competitions_skips_only_that_event():
     assert [e.espn_id for e in events] == ["2"]
 
 
-def test_all_events_missing_bout_times_yields_empty_list():
-    # No structural corruption here -- just nothing usable yet. Callers
-    # (src.build.validate) are responsible for refusing to publish an
-    # under-sized calendar built from this.
+def test_all_events_missing_bout_times_raises():
+    # No structural corruption here -- just nothing usable yet. But an empty
+    # events list is not automatically caught by downstream callers: with a
+    # populated ledger and an existing calendar that already clears
+    # validate()'s minimum on its own, zero fresh events can sail straight
+    # through to publish and silently drop every future event. So
+    # parse_events itself refuses when it has nothing usable at all, rather
+    # than leaving that guarantee to a caller that might not enforce it.
     payload = {"events": [{"id": "1", "name": "UFC 999: A vs B", "competitions": []}]}
-    assert parse_events(payload) == []
+    with pytest.raises(EspnDataError, match="none had usable bout times"):
+        parse_events(payload)
 
 
 def test_empty_payload_raises():

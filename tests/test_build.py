@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from src.build import ValidationError, _atomic_write, build_calendar, main, validate
+from src.build import MINIMUM_EVENTS, ValidationError, _atomic_write, build_calendar, main, validate
 from src.espn import EspnDataError
 from src.ics import calendar
 from src.merge import split_vevents
@@ -105,16 +105,29 @@ def test_event_with_no_bout_times_is_skipped_not_fatal():
 
 
 def test_all_events_missing_bout_times_never_reaches_publish():
-    # If every event lacks bout times, parse_events yields an empty list
-    # rather than raising -- nothing structurally wrong, just nothing usable
-    # yet. A downstream guard (here, the PFN anchor check; in general
-    # validate()'s minimum-events floor) must still refuse to turn that into
-    # a published calendar, so an empty/malformed upstream response can
-    # never silently replace previously published, valid data.
+    # If every event lacks bout times, a naive parse_events would yield an
+    # empty list rather than raising -- and an empty events list is NOT
+    # automatically caught downstream. With a realistic, already-populated
+    # ledger (anchor already assigned) and an existing calendar with enough
+    # past entries to clear validate()'s MINIMUM_EVENTS floor on its own,
+    # assign()/assert_anchor() see nothing new to reject and merge_past()
+    # just carries the past forward -- the old code path would happily
+    # publish a calendar with every future event silently dropped. Build a
+    # real existing calendar/ledger from the good fixture first, then move
+    # "today" past most of the fixture so that escape route is actually
+    # live, and confirm parse_events refuses before any of that runs.
+    good_payload = payload()
+    existing, ledger = build_calendar(good_payload, {}, calendar([]), today=date(2026, 8, 6))
+    future_today = date(2027, 1, 1)
+    # Sanity check: the existing calendar alone (all past relative to
+    # future_today) already clears the minimum on its own, so if the guard
+    # were missing, validate() would not have caught the data loss either.
+    assert len(split_vevents(existing)) >= MINIMUM_EVENTS
+
     broken = {"events": [{"id": e["id"], "name": e["name"], "competitions": []}
-                         for e in payload()["events"]]}
-    with pytest.raises(Exception):
-        build_calendar(broken, {}, calendar([]), today=date(2026, 8, 6))
+                         for e in good_payload["events"]]}
+    with pytest.raises(EspnDataError, match="none had usable bout times"):
+        build_calendar(broken, ledger, existing, today=future_today)
 
 
 def test_unknown_event_type_fails_the_build():

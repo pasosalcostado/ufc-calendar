@@ -113,4 +113,15 @@ def parse_events(payload: dict) -> list[Event]:
             venue_full=venue_full,
         ))
 
+    if not events:
+        # Every event in this payload was skipped for lacking bout times.
+        # Returning [] here would let build_calendar() sail through
+        # assign()/assert_anchor() (an already-populated ledger needs no new
+        # entries) and merge_past() (nothing fresh to seed, past entries
+        # carried forward as-is) -- and if the existing calendar alone had
+        # enough past events to clear validate()'s MINIMUM_EVENTS floor,
+        # every future event would be silently dropped from the published
+        # calendar. Zero usable events is the same failure as zero events.
+        raise EspnDataError("ESPN payload had events but none had usable bout times")
+
     return sorted(events, key=lambda e: e.main_card)
