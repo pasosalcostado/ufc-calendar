@@ -87,6 +87,36 @@ def test_empty_payload_fails_the_build():
         build_calendar({"events": []}, {}, calendar([]), today=date(2026, 8, 6))
 
 
+def test_event_with_no_bout_times_is_skipped_not_fatal():
+    # A newly announced event without scheduled bouts yet (e.g. "UFC Fight
+    # Night: Qatar") must not take down the whole build -- every other,
+    # fully-formed event still publishes.
+    broken = payload()
+    broken["events"].append({
+        "id": "999999",
+        "name": "UFC Fight Night: Qatar",
+        "date": "2026-12-01T00:00Z",
+        "competitions": [{"date": None}],
+    })
+    data, _ = build_calendar(broken, {}, calendar([]), today=date(2026, 8, 6))
+    blocks = split_vevents(data)
+    assert "ufc-999999@pasosalcostado.github.io" not in blocks
+    assert len(blocks) > 43
+
+
+def test_all_events_missing_bout_times_never_reaches_publish():
+    # If every event lacks bout times, parse_events yields an empty list
+    # rather than raising -- nothing structurally wrong, just nothing usable
+    # yet. A downstream guard (here, the PFN anchor check; in general
+    # validate()'s minimum-events floor) must still refuse to turn that into
+    # a published calendar, so an empty/malformed upstream response can
+    # never silently replace previously published, valid data.
+    broken = {"events": [{"id": e["id"], "name": e["name"], "competitions": []}
+                         for e in payload()["events"]]}
+    with pytest.raises(Exception):
+        build_calendar(broken, {}, calendar([]), today=date(2026, 8, 6))
+
+
 def test_unknown_event_type_fails_the_build():
     from src.classify import UnknownEventType
     broken = payload()
