@@ -483,8 +483,8 @@ UID:ufc-600061400@pasosalcostado.github.io
 DTSTART:20261115T020000Z
 DURATION:PT3H
 SUMMARY:UFC 334: Gane vs Hokit
-DESCRIPTION:UFC 334: Gane vs Hokit\nType: Numbered event\nFirst bout: 22:00
-  UTC (4h00m before main card)\nVenue: Madison Square Garden\, New York\, N
+DESCRIPTION:UFC 334: Gane vs Hokit\nType: Numbered event\nFirst bout: 00:00
+  UTC (2h00m before main card)\nVenue: Madison Square Garden\, New York\, N
  Y\nhttps://www.espn.com/mma/fightcenter/_/id/600061400
 LOCATION:New York\, NY
 END:VEVENT
@@ -631,8 +631,8 @@ UID:ufc-countdown-600061400@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Countdown: UFC 334
-DESCRIPTION:UFC 334: Gane vs Hokit\nType: Numbered event\nFirst bout: 22:00
-  UTC (4h00m before main card)\nVenue: Madison Square Garden\, New York\, N
+DESCRIPTION:UFC 334: Gane vs Hokit\nType: Numbered event\nFirst bout: 00:00
+  UTC (2h00m before main card)\nVenue: Madison Square Garden\, New York\, N
  Y\nhttps://www.espn.com/mma/fightcenter/_/id/600061400
 END:VEVENT
 BEGIN:VEVENT
