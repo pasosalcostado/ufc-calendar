@@ -464,7 +464,7 @@ DTSTART:20261024T180000Z
 DURATION:PT3H
 SUMMARY:UFC 333: Volkanovski vs Evloev
 DESCRIPTION:UFC 333: Volkanovski vs Evloev\nType: Numbered event\nFirst bou
- t: 14:00 UTC (4h00m before main card)\nVenue: Etihad Arena\, Abu Dhabi\, U
+ t: 16:00 UTC (2h00m before main card)\nVenue: Etihad Arena\, Abu Dhabi\, U
  nited Arab Emirates\nhttps://www.espn.com/mma/fightcenter/_/id/600061267
 LOCATION:Abu Dhabi\, United Arab Emirates
 END:VEVENT
@@ -623,7 +623,7 @@ DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Countdown: UFC 333
 DESCRIPTION:UFC 333: Volkanovski vs Evloev\nType: Numbered event\nFirst bou
- t: 14:00 UTC (4h00m before main card)\nVenue: Etihad Arena\, Abu Dhabi\, U
+ t: 16:00 UTC (2h00m before main card)\nVenue: Etihad Arena\, Abu Dhabi\, U
  nited Arab Emirates\nhttps://www.espn.com/mma/fightcenter/_/id/600061267
 END:VEVENT
 BEGIN:VEVENT
