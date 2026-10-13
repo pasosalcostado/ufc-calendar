@@ -520,11 +520,11 @@ LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
 UID:ufc-600061665@pasosalcostado.github.io
-DTSTART:20261121T170000Z
+DTSTART:20261121T180000Z
 DURATION:PT3H
 SUMMARY:PFN 29: Procházka vs Stirling
 DESCRIPTION:UFC Fight Night: Procházka vs Stirling\nParamount Fight Night 
- 29\nFirst bout: 14:00 UTC (3h00m before main card)\nVenue: ABHA Arena\, Do
+ 29\nFirst bout: 15:00 UTC (3h00m before main card)\nVenue: ABHA Arena\, Do
  ha\, Qatar\nhttps://www.espn.com/mma/fightcenter/_/id/600061665
 LOCATION:Doha\, Qatar
 END:VEVENT
