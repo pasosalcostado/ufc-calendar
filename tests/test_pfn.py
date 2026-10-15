@@ -1,6 +1,6 @@
 # tests/test_pfn.py
 import json
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import pytest
@@ -12,6 +12,11 @@ from src.pfn import (ANCHOR_ID, ANCHOR_PFN, AnchorMismatch, assert_anchor,
                      assign, load_ledger, save_ledger)
 
 FIXTURE = Path(__file__).parent / "fixtures" / "espn_2026.json"
+
+# After the Aug 8 anchor (so it is frozen), before the last fixture cards.
+TODAY = date(2026, 9, 1)
+LONG_AGO = date(2000, 1, 1)    # every card is upcoming -> all provisional
+FAR_FUTURE = date(2099, 1, 1)  # every card has happened -> all frozen
 
 
 def real_events():
@@ -31,19 +36,19 @@ def _synthetic_pfn_event(espn_id: str, main_card: datetime, name: str = "UFC Fig
 
 def test_counting_from_empty_reproduces_the_known_anchor():
     # The load-bearing check: Roger confirmed 2026-08-08 is PFN 19.
-    ledger = assign({}, real_events())
+    ledger = assign({}, real_events(), TODAY)
     assert ledger[ANCHOR_ID] == ANCHOR_PFN
 
 
 def test_noche_is_counted():
-    ledger = assign({}, real_events())
+    ledger = assign({}, real_events(), TODAY)
     noche = [e for e in real_events() if "Noche" in e.name][0]
     assert noche.espn_id in ledger
 
 
 def test_ppv_and_dwcs_are_not_counted():
     events = real_events()
-    ledger = assign({}, events)
+    ledger = assign({}, events, TODAY)
     for event in events:
         if classify(event.name).counts_for_pfn is False:
             assert event.espn_id not in ledger
@@ -53,32 +58,29 @@ def test_existing_numbers_are_never_recomputed():
     # An event already in the ledger keeps its number even if an earlier card
     # disappears from the feed. This is what protects invoiced numbers.
     events = real_events()
-    full = assign({}, events)
+    full = assign({}, events, LONG_AGO)
     anchor_number = full[ANCHOR_ID]
 
     fight_nights = [e for e in events if classify(e.name).counts_for_pfn]
     without_first = [e for e in events if e is not fight_nights[0]]
 
-    reassigned = assign(full, without_first)
+    reassigned = assign(full, without_first, TODAY)
     assert reassigned[ANCHOR_ID] == anchor_number
 
 
 def test_new_events_continue_from_the_maximum():
     ledger = {"111": 1, "222": 2}
     events = [e for e in real_events() if classify(e.name).counts_for_pfn][:1]
-    updated = assign(ledger, events)
+    updated = assign(ledger, events, TODAY)
     assert updated[events[0].espn_id] == 3
 
 
-def test_new_event_earlier_than_existing_keeps_prior_numbers_and_is_appended():
-    # The case the whole ledger design exists to prevent: a genuinely new
-    # event whose main_card sorts BEFORE cards that are already numbered.
-    # Stability beats tidiness — the new event gets max+1 even though, by
-    # date, it would have sorted into the middle of the existing run. If we
-    # ever "fixed" this to renumber by date, every invoice issued for a later
-    # card would go stale the moment an earlier card was added to the feed.
+def test_finished_cards_keep_their_numbers_when_an_earlier_card_arrives_late():
+    # Invoice safety, now scoped to cards that have happened: once a card is
+    # in the past its number is frozen, so a late-arriving earlier card is
+    # appended at max+1 and every finished card keeps its exact number.
     events = real_events()
-    full = assign({}, events)
+    full = assign({}, events, LONG_AGO)
 
     earliest_numbered = min(
         (e for e in events if classify(e.name).counts_for_pfn),
@@ -88,14 +90,63 @@ def test_new_event_earlier_than_existing_keeps_prior_numbers_and_is_appended():
         "900000001", earliest_numbered.main_card - timedelta(days=30)
     )
 
-    updated = assign(full, events + [late_arrival])
+    updated = assign(full, events + [late_arrival], FAR_FUTURE)
 
-    # Every pre-existing id keeps its exact original number — compare the
-    # whole dict, not just the anchor.
     for espn_id, number in full.items():
         assert updated[espn_id] == number
-
     assert updated[late_arrival.espn_id] == max(full.values()) + 1
+
+
+def test_upcoming_cards_are_numbered_by_date_not_announcement_order():
+    # The Oct 17 / Oct 10 / Sep 26 bug. The Oct 17 card was announced first and
+    # got the next number; the earlier-dated cards announced later must not end
+    # up numbered after it.
+    utc = timezone.utc
+    played = _synthetic_pfn_event("1", datetime(2026, 9, 5, tzinfo=utc))
+    announced_first = _synthetic_pfn_event("50", datetime(2026, 10, 17, tzinfo=utc))
+    announced_later = _synthetic_pfn_event("60", datetime(2026, 10, 10, tzinfo=utc))
+
+    ledger = {"1": 1, "50": 2}   # what the old announcement-order logic stored
+    updated = assign(ledger, [played, announced_first, announced_later], date(2026, 10, 1))
+
+    assert updated == {"1": 1, "60": 2, "50": 3}
+
+
+def test_upcoming_numbers_continue_from_the_highest_frozen_number():
+    utc = timezone.utc
+    played = _synthetic_pfn_event("1", datetime(2026, 9, 5, tzinfo=utc))
+    upcoming = _synthetic_pfn_event("50", datetime(2026, 10, 17, tzinfo=utc))
+
+    stale = {"1": 1, "50": 9}    # a stale provisional number is discarded
+    updated = assign(stale, [played, upcoming], date(2026, 10, 1))
+
+    assert updated == {"1": 1, "50": 2}
+
+
+def test_a_card_on_todays_date_is_still_provisional():
+    # Matches merge_past(): a card is frozen only once its date is BEFORE today.
+    utc = timezone.utc
+    tonight = _synthetic_pfn_event("50", datetime(2026, 10, 17, 21, tzinfo=utc))
+    earlier_new = _synthetic_pfn_event("60", datetime(2026, 10, 17, 18, tzinfo=utc))
+
+    updated = assign({"50": 1}, [tonight, earlier_new], date(2026, 10, 17))
+
+    assert updated == {"60": 1, "50": 2}
+
+
+def test_past_cards_are_never_touched_even_if_their_numbers_look_out_of_order():
+    utc = timezone.utc
+    first = _synthetic_pfn_event("1", datetime(2026, 9, 5, tzinfo=utc))
+    second = _synthetic_pfn_event("2", datetime(2026, 9, 12, tzinfo=utc))
+
+    ledger = {"1": 5, "2": 3}    # already published on invoices
+    assert assign(ledger, [first, second], date(2026, 10, 1)) == ledger
+
+
+def test_a_card_that_dropped_out_of_the_feed_keeps_its_number():
+    # ESPN's payload covers only the current season; rolled-off cards cannot be
+    # recounted, so they are frozen.
+    assert assign({"999": 7}, [], TODAY) == {"999": 7}
 
 
 def test_identical_main_card_breaks_tie_on_espn_id_regardless_of_input_order():
@@ -105,8 +156,8 @@ def test_identical_main_card_breaks_tie_on_espn_id_regardless_of_input_order():
     lower_id = _synthetic_pfn_event("100", same_time)
     higher_id = _synthetic_pfn_event("200", same_time)
 
-    forward = assign({}, [lower_id, higher_id])
-    reversed_input = assign({}, [higher_id, lower_id])
+    forward = assign({}, [lower_id, higher_id], TODAY)
+    reversed_input = assign({}, [higher_id, lower_id], TODAY)
 
     assert forward == {"100": 1, "200": 2}
     assert reversed_input == {"100": 1, "200": 2}
@@ -114,16 +165,16 @@ def test_identical_main_card_breaks_tie_on_espn_id_regardless_of_input_order():
 
 def test_assign_does_not_mutate_the_input():
     original = {"111": 1}
-    assign(original, real_events())
+    assign(original, real_events(), TODAY)
     assert original == {"111": 1}
 
 
 def test_assert_anchor_passes_on_correct_ledger():
-    assert_anchor(assign({}, real_events()))
+    assert_anchor(assign({}, real_events(), TODAY))
 
 
 def test_assert_anchor_raises_on_drift():
-    ledger = assign({}, real_events())
+    ledger = assign({}, real_events(), TODAY)
     ledger[ANCHOR_ID] = 20
     with pytest.raises(AnchorMismatch, match="19"):
         assert_anchor(ledger)
@@ -136,7 +187,7 @@ def test_assert_anchor_raises_when_anchor_absent():
 
 def test_roundtrip(tmp_path):
     path = tmp_path / "pfn_ledger.json"
-    ledger = assign({}, real_events())
+    ledger = assign({}, real_events(), TODAY)
     save_ledger(ledger, path)
     assert load_ledger(path) == ledger
 

@@ -2,13 +2,32 @@
 """PFN (Paramount Fight Night) numbering.
 
 ESPN does not publish these numbers; they are derived by counting Fight Nights
-chronologically. Counting from scratch on every build would be wrong twice
-over: a cancelled card renumbers everything after it, and ESPN's payload covers
-only the current season, so after rollover there is nothing left to count from.
+chronologically. Counting from scratch on every build would be wrong: ESPN's
+payload covers only the current season, so after rollover there is nothing
+left to count from, and a card that has already happened must never change
+number -- Roger puts these numbers on invoices.
 
-So numbers are assigned ONCE and stored. Roger puts them on invoices.
+So the rule is split by whether the card has happened yet:
+
+* FROZEN: a ledger entry whose card has already happened (main card date
+  before ``today``), or whose card is no longer in ESPN's payload (rolled off
+  the season, so it cannot be recounted). Never modified.
+* PROVISIONAL: every PFN-eligible card from ``today`` onward. These are
+  renumbered chronologically on every build, continuing from the highest
+  frozen number.
+
+Why provisional: cards are announced out of date order, so numbering them in
+announcement order (the previous behaviour) locked in wrong numbers -- e.g.
+Buckley vs Malott (Oct 17) was announced before Rosas vs Barcelos (Sep 26) and
+Allen vs Duncan (Oct 10) and so got a lower number than both. A number on an
+upcoming card is only a forecast; it becomes permanent when the card happens.
+
+Known limitation: a card that is cancelled AFTER being numbered, and so drops
+out of the payload, is treated as frozen (we cannot tell cancelled from rolled
+off) and leaves a gap in the sequence. The ledger does not store dates.
 """
 import json
+from datetime import date
 from pathlib import Path
 
 from src.classify import classify
@@ -34,23 +53,30 @@ def save_ledger(ledger: dict[str, int], path: Path) -> None:
     Path(path).write_text(json.dumps(ordered, indent=1) + "\n", encoding="utf-8")
 
 
-def assign(ledger: dict[str, int], events: list[Event]) -> dict[str, int]:
-    """Return a new ledger with numbers for any unseen PFN-eligible events.
+def assign(ledger: dict[str, int], events: list[Event], today: date) -> dict[str, int]:
+    """Return a new ledger: frozen entries kept, upcoming cards numbered by date.
 
-    Existing entries are never modified. New events are numbered in
-    chronological order, continuing from the current maximum.
+    ``today`` must be the same UTC date that merge_past() uses, so a card is
+    frozen in the ledger on exactly the day its calendar text is frozen.
     """
-    updated = dict(ledger)
+    by_id = {event.espn_id: event for event in events}
+
+    # Frozen: happened already, or not in the payload any more.
+    updated = {
+        espn_id: number
+        for espn_id, number in ledger.items()
+        if espn_id not in by_id or by_id[espn_id].main_card.date() < today
+    }
     next_number = max(updated.values(), default=0) + 1
 
     # Tiebreak on espn_id: two events sharing an identical main_card must still
     # sort deterministically, or the same input could yield different numbers
     # on different runs. These numbers go on invoices.
-    for event in sorted(events, key=lambda e: (e.main_card, e.espn_id)):
-        if not classify(event.name).counts_for_pfn:
-            continue
-        if event.espn_id in updated:
-            continue
+    pending = [
+        event for event in events
+        if event.espn_id not in updated and classify(event.name).counts_for_pfn
+    ]
+    for event in sorted(pending, key=lambda e: (e.main_card, e.espn_id)):
         updated[event.espn_id] = next_number
         next_number += 1
 

@@ -32,7 +32,7 @@ class ValidationError(Exception):
 def build_calendar(payload: dict, ledger: dict[str, int], existing: bytes,
                    today: date) -> tuple[bytes, dict[str, int]]:
     events = parse_events(payload)
-    updated_ledger = assign(ledger, events)
+    updated_ledger = assign(ledger, events, today)
     assert_anchor(updated_ledger)
 
     fresh: dict[str, str] = {}
@@ -115,9 +115,10 @@ def main(argv: list[str] | None = None) -> int:
     # the past, merge_past() freezes the block verbatim forever, so the
     # divergence becomes permanent and lands on an invoice. The reverse is
     # safe: if the ledger write succeeds but the calendar publish then
-    # fails, the next run's assign() sees those events as already numbered
-    # (assign-once, never renumbered) and reproduces identical output --
-    # republishing is simply a retry. So the safe-to-retry step goes last.
+    # fails, the next run's assign() recomputes the same numbers from the same
+    # inputs (frozen entries are kept, upcoming cards are numbered by date, both
+    # deterministically) and reproduces identical output -- republishing is
+    # simply a retry. So the safe-to-retry step goes last.
     save_ledger(updated, args.ledger)
     _atomic_write(args.output, data)
 
