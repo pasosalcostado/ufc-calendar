@@ -422,8 +422,8 @@ BEGIN:VEVENT
 UID:ufc-600060773@pasosalcostado.github.io
 DTSTART:20261018T000000Z
 DURATION:PT3H
-SUMMARY:PFN 24: Buckley vs Malott
-DESCRIPTION:UFC Fight Night: Buckley vs Malott\nParamount Fight Night 24\nF
+SUMMARY:PFN 26: Buckley vs Malott
+DESCRIPTION:UFC Fight Night: Buckley vs Malott\nParamount Fight Night 26\nF
  irst bout: 21:00 UTC (3h00m before main card)\nVenue: Rogers Place\, Edmon
  ton\, AB\nhttps://www.espn.com/mma/fightcenter/_/id/600060773
 LOCATION:Edmonton\, AB
@@ -472,8 +472,8 @@ BEGIN:VEVENT
 UID:ufc-600061268@pasosalcostado.github.io
 DTSTART:20261108T010000Z
 DURATION:PT3H
-SUMMARY:PFN 26: Bonfim vs Brady
-DESCRIPTION:UFC Fight Night: Bonfim vs Brady\nParamount Fight Night 26\nFir
+SUMMARY:PFN 28: Bonfim vs Brady
+DESCRIPTION:UFC Fight Night: Bonfim vs Brady\nParamount Fight Night 28\nFir
  st bout: 22:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas\
  , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061268
 LOCATION:Las Vegas\, NV
