@@ -452,9 +452,9 @@ BEGIN:VEVENT
 UID:ufc-600061266@pasosalcostado.github.io
 DTSTART:20260927T000000Z
 DURATION:PT3H
-SUMMARY:PFN 25: Rosas Jr. vs Barcelos
+SUMMARY:PFN 24: Rosas Jr. vs Barcelos
 DESCRIPTION:UFC Fight Night: Rosas Jr. vs Barcelos\nParamount Fight Night 2
- 5\nFirst bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las 
+ 4\nFirst bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las 
  Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061266
 LOCATION:Las Vegas\, NV
 END:VEVENT
@@ -512,8 +512,8 @@ BEGIN:VEVENT
 UID:ufc-600061541@pasosalcostado.github.io
 DTSTART:20261011T000000Z
 DURATION:PT3H
-SUMMARY:PFN 28: Allen vs Duncan
-DESCRIPTION:UFC Fight Night: Allen vs Duncan\nParamount Fight Night 28\nFir
+SUMMARY:PFN 25: Allen vs Duncan
+DESCRIPTION:UFC Fight Night: Allen vs Duncan\nParamount Fight Night 25\nFir
  st bout: 21:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas\
  , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061541
 LOCATION:Las Vegas\, NV
