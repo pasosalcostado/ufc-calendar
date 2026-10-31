@@ -472,10 +472,10 @@ BEGIN:VEVENT
 UID:ufc-600061268@pasosalcostado.github.io
 DTSTART:20261108T010000Z
 DURATION:PT3H
-SUMMARY:PFN 28: Bonfim vs Brady
-DESCRIPTION:UFC Fight Night: Bonfim vs Brady\nParamount Fight Night 28\nFir
- st bout: 22:00 UTC (3h00m before main card)\nVenue: Meta APEX\, Las Vegas\
- , NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061268
+SUMMARY:PFN 28: Cortes Acosta vs Walker
+DESCRIPTION:UFC Fight Night: Cortes Acosta vs Walker\nParamount Fight Night
+  28\nFirst bout: 22:00 UTC (3h00m before main card)\nVenue: Meta APEX\, La
+ s Vegas\, NV\nhttps://www.espn.com/mma/fightcenter/_/id/600061268
 LOCATION:Las Vegas\, NV
 END:VEVENT
 BEGIN:VEVENT
