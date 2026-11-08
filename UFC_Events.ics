@@ -529,6 +529,16 @@ DESCRIPTION:UFC Fight Night: Procházka vs Stirling\nParamount Fight Night
 LOCATION:Doha\, Qatar
 END:VEVENT
 BEGIN:VEVENT
+UID:ufc-600062700@pasosalcostado.github.io
+DTSTART:20261205T180000Z
+DURATION:PT3H
+SUMMARY:PFN 30: Adesanya vs Magomedov
+DESCRIPTION:UFC Fight Night: Adesanya vs Magomedov\nParamount Fight Night 3
+ 0\nFirst bout: 15:00 UTC (3h00m before main card)\nVenue: ANB Arena\, Riya
+ dh\, Saudi Arabia\nhttps://www.espn.com/mma/fightcenter/_/id/600062700
+LOCATION:Riyadh\, Saudi Arabia
+END:VEVENT
+BEGIN:VEVENT
 UID:ufc-countdown-600057024@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20260109
 DTEND;VALUE=DATE:20260110
