@@ -493,8 +493,8 @@ UID:ufc-600061401@pasosalcostado.github.io
 DTSTART:20261213T020000Z
 DURATION:PT3H
 SUMMARY:UFC 335: Oliveira vs Lopes
-DESCRIPTION:UFC 335: Oliveira vs Lopes\nType: Numbered event\nFirst bout: 2
- 2:00 UTC (4h00m before main card)\nVenue: T-Mobile Arena\, Las Vegas\, NV\
+DESCRIPTION:UFC 335: Oliveira vs Lopes\nType: Numbered event\nFirst bout: 0
+ 0:00 UTC (2h00m before main card)\nVenue: T-Mobile Arena\, Las Vegas\, NV\
  nhttps://www.espn.com/mma/fightcenter/_/id/600061401
 LOCATION:Las Vegas\, NV
 END:VEVENT
@@ -660,8 +660,8 @@ UID:ufc-countdown-600061401@pasosalcostado.github.io
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Countdown: UFC 335
-DESCRIPTION:UFC 335: Oliveira vs Lopes\nType: Numbered event\nFirst bout: 2
- 2:00 UTC (4h00m before main card)\nVenue: T-Mobile Arena\, Las Vegas\, NV\
+DESCRIPTION:UFC 335: Oliveira vs Lopes\nType: Numbered event\nFirst bout: 0
+ 0:00 UTC (2h00m before main card)\nVenue: T-Mobile Arena\, Las Vegas\, NV\
  nhttps://www.espn.com/mma/fightcenter/_/id/600061401
 END:VEVENT
 END:VCALENDAR
